@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import TextLoop from 'react-text-loop'
 
+import safeComputer from './assets/safe-computer-qr-code.svg'
+import findDevice from './assets/find-device.svg'
+import exchangeItem from './assets/exchange-device-eth.svg'
+
 import './App.css'
 
 const App = () => {
@@ -49,37 +53,24 @@ const App = () => {
             </div>
           </div>
       </header>
-      <section className='first'>
-      The problem is that sometimes it works while other times it doesn’t. When it does work, the element sticks, but in other parts of the scrolling it stops sticking. As someone who eats and breaths CSS daily, it was unacceptable for me to not understand the issue to its root , so I decided to thoroughly explore Position Sticky.
+      <section className='App-section'>
+        <h2 className='App-section-h2'>
+          A SIMPLE WORKFLOW TO<br /> 
+          RECOVER YOUR ITEM 
+        </h2>
+        <div className='App-section-illustration0'><img src={safeComputer} /></div>
+        <div className='App-section-illustration1'><img src={findDevice} style={{marginBottom: '-24px'}} /></div>
+        <div className='App-section-illustration2'><img src={exchangeItem} style={{marginBottom: '-24px'}} /></div>
 
-The Sticky Exploration
-While playing with it, I quickly noticed that when an element with a position: sticky style is wrapped, and it is the only element inside the wrapper element, this element, which was defined position: sticky will not stick.
-
-The problem is that sometimes it works while other times it doesn’t. When it does work, the element sticks, but in other parts of the scrolling it stops sticking. As someone who eats and breaths CSS daily, it was unacceptable for me to not understand the issue to its root , so I decided to thoroughly explore Position Sticky.
-
-The Sticky Exploration
-While playing with it, I quickly noticed that when an element with a position: sticky style is wrapped, and it is the only element inside the wrapper element, this element, which was defined position: sticky will not stick.
-
-The problem is that sometimes it works while other times it doesn’t. When it does work, the element sticks, but in other parts of the scrolling it stops sticking. As someone who eats and breaths CSS daily, it was unacceptable for me to not understand the issue to its root , so I decided to thoroughly explore Position Sticky.
-
-The Sticky Exploration
-While playing with it, I quickly noticed that when an element with a position: sticky style is wrapped, and it is the only element inside the wrapper element, this element, which was defined position: sticky will not stick.
-      </section>
-      <section style={{background: 'red'}}>
-      The problem is that sometimes it works while other times it doesn’t. When it does work, the element sticks, but in other parts of the scrolling it stops sticking. As someone who eats and breaths CSS daily, it was unacceptable for me to not understand the issue to its root , so I decided to thoroughly explore Position Sticky.
-
-The Sticky Exploration
-While playing with it, I quickly noticed that when an element with a position: sticky style is wrapped, and it is the only element inside the wrapper element, this element, which was defined position: sticky will not stick.
-
-The problem is that sometimes it works while other times it doesn’t. When it does work, the element sticks, but in other parts of the scrolling it stops sticking. As someone who eats and breaths CSS daily, it was unacceptable for me to not understand the issue to its root , so I decided to thoroughly explore Position Sticky.
-
-The Sticky Exploration
-While playing with it, I quickly noticed that when an element with a position: sticky style is wrapped, and it is the only element inside the wrapper element, this element, which was defined position: sticky will not stick.
-
-The problem is that sometimes it works while other times it doesn’t. When it does work, the element sticks, but in other parts of the scrolling it stops sticking. As someone who eats and breaths CSS daily, it was unacceptable for me to not understand the issue to its root , so I decided to thoroughly explore Position Sticky.
-
-The Sticky Exploration
-While playing with it, I quickly noticed that when an element with a position: sticky style is wrapped, and it is the only element inside the wrapper element, this element, which was defined position: sticky will not stick.
+        <div className='App-section-description0'>
+          1. Paste your Qr Code on your item.
+        </div>
+        <div className='App-section-description1'>
+          2. Seeing the reward, the finder is incentived to give you back the item.
+        </div>
+        <div className='App-section-description2'>
+          3. Exchange the reward for the item.
+        </div>
       </section>
     </div>
   )
