@@ -1,25 +1,46 @@
 .App {
+
 }
 
 .App-header {
-  background: url(assets/header-bg.png);
-  min-height: calc(100vh + 230px);
+  background: red;
+  min-width: 100vw;
+  min-height: calc(100vh + 280px);
+  background: url(assets/header-bg.png) no-repeat;
   background-size: cover;
-  background-position: bottom; 
+  background-position: bottom;
   color: white;
-}
-
-.App-header-logo {
-  padding: 36px;
-  font-weight: bold;
-  font-size: 36px;
-}
-
-.App-header-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 70px);
+
+}
+
+.App-header-menu {
+  margin-top: -86px;
+  min-width: 100vw;
+  background: #2DA4E1;
+  position: sticky;
+  top: 0px;
+  width: 100vw;
+  color: #fff;
+  z-index: 100;
+}
+
+.App-header-menu__isTop {
+  margin-top: -86px;
+  min-width: 100vw;
+  background: transparent;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.App-header-menu-logo {
+  padding-left: 36px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 60px;
 }
 
 .App-header-wrapper-content {
@@ -57,3 +78,4 @@
   min-width: 3vw;
   background: red;
 }
+
