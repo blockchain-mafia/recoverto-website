@@ -18,7 +18,7 @@
 .App-header-menu {
   margin-top: -60px;
   min-width: 100vw;
-  background: #2DA4E1;
+  background: #14213D;
   position: sticky;
   top: 0px;
   width: 100vw;
@@ -95,6 +95,7 @@
 }
 
 .App-section-h2 {
+  margin-bottom: 10px;
   grid-area: title;
   font-family: Roboto;
   font-weight: lighter;
