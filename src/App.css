@@ -3,9 +3,8 @@
 }
 
 .App-header {
-  background: red;
   min-width: 100vw;
-  min-height: calc(100vh + 280px);
+  min-height: calc(100vh + 240px);
   background: url(assets/header-bg.png) no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -17,7 +16,7 @@
 }
 
 .App-header-menu {
-  margin-top: -86px;
+  margin-top: -60px;
   min-width: 100vw;
   background: #2DA4E1;
   position: sticky;
@@ -25,14 +24,17 @@
   width: 100vw;
   color: #fff;
   z-index: 100;
+  -webkit-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
 }
 
 .App-header-menu__isTop {
-  margin-top: -86px;
+  position: relative;
+  top: 90px;
+  margin-top: -60px;
   min-width: 100vw;
   background: transparent;
-  background-size: cover;
-  background-attachment: fixed;
   color: #fff;
 }
 
