@@ -78,3 +78,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 1);
   top: 0;
 }
+
+@media (max-width: 48em) {
+  .bm-burger-button {
+    right: 20px;
+  }
+}

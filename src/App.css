@@ -78,7 +78,6 @@
 .App-header-wrapper-content-buttons-space {
   display: inline-block;
   min-width: 3vw;
-  background: red;
 }
 
 .App-section {
@@ -141,5 +140,57 @@
   font-size: 20px;
   text-align: center;
   color: #14213D;
+}
+
+@media (max-width: 48em) {
+  .App-header-menu {
+    position: fixed; 
+    top:0;
+    margin-top: 0;
+  }
+
+  .App-header-menu-logo {
+    padding-left: 20px;
+  }
+
+  .App-header-wrapper-content{
+    position: absolute;
+    top: 30vh;
+    font-size: 32px;
+  }
+  .App-header-wrapper-content-buttons {
+    position: relative;
+    top: 18vh;
+  }
+  
+  .App-header-wrapper-content-buttons button {
+    width: 90vw;
+    margin-top: 3vh;
+  }
+
+  .App-header-wrapper-content-buttons-space{
+    display: none;
+  }
+
+  .App-section-h2 {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .App-section {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    grid-template-areas:
+        'title'
+        'illustration0'
+        'description0'
+        'illustration1'
+        'description1'
+        'illustration2'
+        'description2';
+  }
 }
 
