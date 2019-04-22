@@ -148,7 +148,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      <section className="App-section App-section-faq" style={{display: 'none'}}>
+      <section className="App-section App-section-faq">
         <h2 className="App-section-faq-h2">FAQ</h2>
         <Collapsible trigger="Why we don't use a password instead of a private code in the Qr Code?">
           <p>This is the collapsible content. It can be any element or React component you like.</p>
