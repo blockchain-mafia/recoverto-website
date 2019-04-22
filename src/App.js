@@ -53,24 +53,60 @@ const App = () => {
             </div>
           </div>
       </header>
-      <section className='App-section'>
-        <h2 className='App-section-h2'>
+      <section className='App-section App-section-how'>
+        <h2 className='App-section-how-h2'>
           A SIMPLE WORKFLOW TO<br /> 
           RECOVER YOUR ITEM 
         </h2>
-        <div className='App-section-illustration0'><img src={safeComputer} /></div>
-        <div className='App-section-illustration1'><img src={findDevice} style={{marginBottom: '-24px'}} /></div>
-        <div className='App-section-illustration2'><img src={exchangeItem} style={{marginBottom: '-24px'}} /></div>
+        <div className='App-section-how-illustration0'><img src={safeComputer} /></div>
+        <div className='App-section-how-illustration1'><img src={findDevice} style={{marginBottom: '-24px'}} /></div>
+        <div className='App-section-how-illustration2'><img src={exchangeItem} style={{marginBottom: '-24px'}} /></div>
 
-        <div className='App-section-description0'>
+        <div className='App-section-how-description0'>
           1. Paste your Qr Code on your item.
         </div>
-        <div className='App-section-description1'>
+        <div className='App-section-how-description1'>
           2. Seeing the reward, the finder is incentived to give you back the item.
         </div>
-        <div className='App-section-description2'>
+        <div className='App-section-how-description2'>
           3. Exchange the reward for the item.
         </div>
+      </section>
+      <section className='App-section App-section-ctas'>
+        <div className='App-section-ctas-owner'>
+          <div className='App-section-ctas-header-top'>
+            OWNER
+          </div>
+          <header className='App-section-ctas-header'>
+            Take care of your item against loss.
+          </header>
+          <div className='App-section-ctas-content'>
+            Set up the reward and enter your contact information to generate the QR Code.
+          </div>
+          <div className='App-section-ctas-link'>
+            SAFE YOUR ITEM
+          </div>
+        </div>
+        <div className='App-section-ctas-finder'>
+        <div className='App-section-ctas-header-top'>
+            FINDER
+          </div>
+          <header className='App-section-ctas-header'>
+            Be rewarded when you find and give back a lost item.
+          </header>
+          <div className='App-section-ctas-content'>
+            Claim the discovered of a lost item to get the reward. 
+          </div>
+          <div className='App-section-ctas-link'>
+            CLAIM DISCOVERED
+          </div>
+        </div>
+      </section>
+      <section className='App-section App-section-technology'>
+        <h2 className='App-section-technology-h2'>
+          MORE TECHNOLOGY<br /> 
+          FOR A BETTER SERVICE
+        </h2>
       </section>
     </div>
   )
