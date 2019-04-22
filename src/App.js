@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import TextLoop from 'react-text-loop'
+import Collapsible from 'react-collapsible'
 
 import './App.css'
 
@@ -111,19 +112,65 @@ const App = () => {
         <div className='App-section-technology-card App-section-technology-escrow'>
         <div className="App-section-technology-icon App-section-technology-escrow-icon">{' '}</div>
           <h3>Escrow</h3>
-          <p>Music is an art form whose medium is sound and silence. Generally, a song is considered the smallest standalone work of music, especially when involving singing. </p>
+          <p>The reward funds are locked in an escrow system to incentive the finder to return the item.</p>
         </div>
         <div className='App-section-technology-card App-section-technology-privacy'>
           <div className="App-section-technology-icon App-section-technology-privacy-icon">{' '}</div>
           <h3>Privacy</h3>
-          <p>Music is an art form whose medium is sound and silence. Generally, a song is considered the smallest standalone work of music, especially when involving singing. </p>
+          <p>Your personnal data are encrypted and they are only accessible for the person who found your item.</p>
         </div>
         <div className='App-section-technology-card App-section-technology-blockchain'>
           <div className="App-section-technology-icon App-section-technology-blockchain-icon">{' '}</div>
           <h3>Blockchain</h3>
-          <p>Music is an art form whose medium is sound and silence. Generally, a song is considered the smallest standalone work of music, especially when involving singing. </p>
+          <p>This is a project based on Ethereum and Kleros to guarentee the resiliance of the application and to enforce the reward.</p>
         </div>
       </section>
+      <section className="App-section-useCases-wrapper">
+        <div className="App-section App-section-useCases">
+          <h2 className="App-section-useCases-h2">
+            YOUR DATA ARE MORE IMPORTANT<br /> 
+            THAN YOUR DEVICE
+          </h2>
+          <div className="App-section-useCases-card App-section-useCases-key">
+            <div className="App-section-useCases-icon App-section-useCases-key-icon">{' '}</div>
+            <h3>Private Keys</h3>
+            <p>Prevent your crypto wallet/keys (computer, smartphone, hardware ledger) against loss. Jaxx Metamask. </p>
+          </div>   
+          <div className="App-section-useCases-card App-section-useCases-work">
+            <div className="App-section-useCases-icon App-section-useCases-work-icon">{' '}</div>
+            <h3>Work</h3>
+            <p>Your personnal data are encrypted and they are only accessible for the person who found your item.</p>
+          </div>
+          <div className="App-section-useCases-card App-section-useCases-personnalData">
+            <div className="App-section-useCases-icon App-section-useCases-personnalData-icon">{' '}</div>
+            <h3>Personnal Data</h3>
+            <p>This is a project based on Ethereum and Kleros to guarentee the resiliance of the application and to enforce the reward.</p>
+          </div>
+        </div>
+      </section>
+      <section className="App-section App-section-faq" style={{display: 'none'}}>
+        <h2 className="App-section-faq-h2">FAQ</h2>
+        <Collapsible trigger="Why we don't use a password instead of a private code in the Qr Code?">
+          <p>This is the collapsible content. It can be any element or React component you like.</p>
+          <p>also prevent ddos</p>
+          <p>fund finder</p>
+        </Collapsible>
+        <Collapsible trigger="Why the contact information are not directly visible on the Qr Code?">
+          <p>This is the collapsible content. It can be any element or React component you like.</p>
+          <p>It can even be another Collapsible component. Check out the next section!</p>
+        </Collapsible>
+        <Collapsible trigger="Is there a notification service when we clam a found?">
+          <p>This is the collapsible content. It can be any element or React component you like.</p>
+          <p>It can even be another Collapsible component. Check out the next section!</p>
+        </Collapsible>
+        <Collapsible trigger="Ou puis je trouver des stickers imprimables?">
+          <p>This is the collapsible content. It can be any element or React component you like.</p>
+          <p>It can even be another Collapsible component. Check out the next section!</p>
+        </Collapsible>
+      </section>
+      <footer className="App-footer">
+        @ 2019 RECOVER
+      </footer>
     </div>
   )
 }

@@ -250,12 +250,12 @@
   grid-template-areas:
     'title1 title1 title1'
     'escrow privacy blockchain';
-  font-family: 'Raleway', sans-serif;
+  font-family: Nunito;
   background: #fff;
   text-align: center;
 }
 
-.App-section-technology-h2 {
+.App-section-technology-h2, .App-section-useCases-h2, .App-section-faq-h2 {
   grid-area: title1;  
   font-family: Roboto;
   font-weight: lighter;
@@ -267,17 +267,23 @@
 }
 
 .App-section-technology-card {
+  text-align: center;
   padding: 40px;
   transition: box-shadow 0.3s;
 }
 
-.App-section-technology-escrow {
-  grid-area: escrow;
+.App-section-useCases-card {
+  text-align: center;
   padding: 40px;
   transition: box-shadow 0.3s;
 }
 
-.App-section-technology-icon {
+.App-section-useCases-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.App-section-technology-icon, .App-section-useCases-icon {
   min-height: 58px;
   background-position: center;
   background-repeat: no-repeat;
@@ -297,38 +303,30 @@
   background-image: url(./assets/stream-icon.svg);
 }
 
-.App-section-technology-privacy {
-  grid-area: privacy;
-  padding: 40px;
-  transition: box-shadow 0.3s;
-}
-
-.App-section-technology-blockchain {
-  grid-area: blockchain;
-  padding: 40px;
-  transition: box-shadow 0.3s;
-}
-
 .App-section-technology-card:hover {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .App-section-technology-card:hover p {
-  color: #14213D;
   color: #555;
 }
-.App-section-technology-card:hover h3:after {
+
+.App-section-technology-card:hover h3, .App-section-useCases-card:hover h3 {
+  color: #14213D;
+}
+
+.App-section-technology-card:hover h3:after, .App-section-useCases-card:hover h3:after {
   width: 25px;
 }
 
-.App-section-technology h3 {
+.App-section-technology h3, .App-section-useCases h3 {
   color: #6f6f6f;
   display: inline-block;
   font-size: 24px;
   font-weight: 100;
   transition: color 0.3s;
 }
-.App-section-technology h3:after {
+.App-section-technology h3:after, .App-section-useCases h3:after {
   content: '';
   position: relative;
   left: 50%;
@@ -340,15 +338,113 @@
   background: #6f6f6f;
   transition: width 0.3s;
 }
-.App-section-technology p {
-  color: #a2a2a2;
-  text-align: left;
+
+.App-section-technology p, .App-section-useCases p {
+  color: #8d7c7c;
   text-indent: 1em;
   font-size: 16px;
   line-height: 26px;
   transition: color 0.3s;
 }
 
+.App-section-useCases-wrapper {
+  text-align: left;
+  background-image: url(./assets/use-cases-bg.png);
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+}
+
+.App-section-useCases {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  grid-template-areas:
+    'title2 title2 title2'
+    'key work personnalData';
+  font-family: Nunito;
+}
+
+.App-section-useCases-h2 {
+  grid-area: title2;
+  margin-bottom: 40px;
+}
+
+.App-section-useCases-key {
+  grid-area: key;
+}
+
+.App-section-useCases-work {
+  grid-area: work;
+}
+
+.App-section-useCases-personnalData {
+  grid-area: personnalData;
+}
+
+.App-section-useCases-card p {
+  color: #555;
+}
+
+.App-section-useCases-card:hover p {
+  color: #14213D;
+}
+
+.App-section-useCases-key-icon {
+  background-image: url(./assets/key-icon.svg);
+}
+
+.App-section-useCases-work-icon {
+  background-image: url(./assets/scroll-icon.svg);
+}
+
+.App-section-useCases-personnalData-icon {
+  background-image: url(./assets/images-icon.svg);
+}
+
+.App-section-faq-h2 {
+  margin-top: 100px;
+}
+
+.Collapsible__contentInner {
+  font-family: Nunito;
+}
+
+.Collapsible__trigger {
+  font-size: 30px;
+  display: block;
+  font-family: Nunito;
+  font-weight: 400;
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #555;
+
+  padding: 10px 0;
+  padding-right: 48px;
+}
+  .Collapsible__trigger:after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f358';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms; }
+  .Collapsible__trigger.is-open:after {
+    transform: rotateZ(180deg); }
+
+.App-footer {
+  margin-top: 200px;
+  background: #F2F2F2;
+  line-height: 52px;
+  font-size: 14px;
+  line-height: 52px;
+  text-align: center;
+  color: #CFCFCF;
+}
 
 @media (max-width: 48em) {
   .App-header-menu {
@@ -418,6 +514,14 @@
       'escrow'
       'privacy'
       'blockchain';
+  }
+
+  .App-section-useCases {
+    grid-template-areas:
+      'title2'
+      'key'
+      'work'
+      'personnalData';
   }
 }
 
