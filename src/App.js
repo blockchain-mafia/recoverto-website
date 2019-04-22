@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import TextLoop from 'react-text-loop'
 
-import safeComputer from './assets/safe-computer-qr-code.svg'
-import findDevice from './assets/find-device.svg'
-import exchangeItem from './assets/exchange-device-eth.svg'
-
 import './App.css'
 
 const App = () => {
@@ -53,23 +49,28 @@ const App = () => {
             </div>
           </div>
       </header>
-      <section className='App-section App-section-how'>
-        <h2 className='App-section-how-h2'>
+      <section className="App-section App-section-how">
+        <h2 className="App-section-how-h2">
           A SIMPLE WORKFLOW TO<br /> 
           RECOVER YOUR ITEM 
         </h2>
-        <div className='App-section-how-illustration0'><img src={safeComputer} /></div>
-        <div className='App-section-how-illustration1'><img src={findDevice} style={{marginBottom: '-24px'}} /></div>
-        <div className='App-section-how-illustration2'><img src={exchangeItem} style={{marginBottom: '-24px'}} /></div>
-
-        <div className='App-section-how-description0'>
-          1. Paste your Qr Code on your item.
+        <div className="App-section-how-illustration App-section-how-illustration0">{' '}</div>
+        <div className="App-section-how-illustration App-section-how-illustration1">{' '}</div>
+        <div className="App-section-how-illustration App-section-how-illustration2">{' '}</div>
+        <div className="App-section-how-description0">
+          <ol>
+            <li>Generate and paste your Qr Code on your item.</li>
+          </ol>
         </div>
-        <div className='App-section-how-description1'>
-          2. Seeing the reward, the finder is incentived to give you back the item.
+        <div className="App-section-how-description1">
+          <ol start="2">
+            <li>Seeing the reward, the finder is incentived to give you back the item.</li>
+          </ol>
         </div>
         <div className='App-section-how-description2'>
-          3. Exchange the reward for the item.
+          <ol start="3">
+            <li>Exchange the reward for the item.</li>
+          </ol>
         </div>
       </section>
       <section className='App-section App-section-ctas'>
@@ -107,6 +108,21 @@ const App = () => {
           MORE TECHNOLOGY<br /> 
           FOR A BETTER SERVICE
         </h2>
+        <div className='App-section-technology-card App-section-technology-escrow'>
+        <div className="App-section-technology-icon App-section-technology-escrow-icon">{' '}</div>
+          <h3>Escrow</h3>
+          <p>Music is an art form whose medium is sound and silence. Generally, a song is considered the smallest standalone work of music, especially when involving singing. </p>
+        </div>
+        <div className='App-section-technology-card App-section-technology-privacy'>
+          <div className="App-section-technology-icon App-section-technology-privacy-icon">{' '}</div>
+          <h3>Privacy</h3>
+          <p>Music is an art form whose medium is sound and silence. Generally, a song is considered the smallest standalone work of music, especially when involving singing. </p>
+        </div>
+        <div className='App-section-technology-card App-section-technology-blockchain'>
+          <div className="App-section-technology-icon App-section-technology-blockchain-icon">{' '}</div>
+          <h3>Blockchain</h3>
+          <p>Music is an art form whose medium is sound and silence. Generally, a song is considered the smallest standalone work of music, especially when involving singing. </p>
+        </div>
       </section>
     </div>
   )

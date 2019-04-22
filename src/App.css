@@ -88,62 +88,71 @@
 }
 
 .App-section-how {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 0 30px;
   grid-template-areas:
     'title title title'
     'illustration0 illustration1 illustration2'
-    'description0 description1 description2';
+    'description0 description1 description2'; 
 }
 
 .App-section-how-h2 {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   grid-area: title;
   font-family: Roboto;
   font-weight: lighter;
   font-size: 50px;
   line-height: normal;
   color: #14213D;
+  margin-bottom: 70px;
+}
+
+.App-section-how-illustration {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 230px;
 }
 
 .App-section-how-illustration0 {
   grid-area: illustration0;
+  background-image: url(./assets/safe-computer-qr-code.svg);
 }
 
 .App-section-how-illustration1 {
   grid-area: illustration1;
+  background-image: url(./assets/find-device.svg);
 }
 
 .App-section-how-illustration2 {
   grid-area: illustration2;
+  background-image: url(./assets/exchange-device-eth.svg);
 }
 
 .App-section-how-description0 {
   grid-area: description0;
-  font-family: Roboto;
-  font-weight: lighter;
+  font-family: Nunito;
+  font-weight: regular;
   font-size: 20px;
-  text-align: center;
-  color: #14213D;
+  color: #555;
+  padding: 0 5%;
 }
 
 .App-section-how-description1 {
   grid-area: description1;
-  font-family: Roboto;
-  font-weight: lighter;
+  font-family: Nunito;
   font-size: 20px;
-  text-align: center;
-  color: #14213D;
+  color: #555;
+  padding: 0 5%;
 }
 
 .App-section-how-description2 {
   grid-area: description2;
-  font-family: Roboto;
-  font-weight: lighter;
+  font-family: Nunito;
   font-size: 20px;
-  text-align: center;
-  color: #14213D;
+  color: #555;
+  padding: 0 5%;
 }
 
 .App-section-ctas {
@@ -160,10 +169,12 @@
   grid-area: owner;
   padding: 65px 74px;
   background: #12C2E9;
+  background-image: url(./assets/big-arrow-owner.svg);
+  background-position: right bottom;
+   background-repeat: no-repeat;
   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
   border-radius: 5px; 
   color: #fff;
-  cursor: pointer;
   min-height: 500px;
   display: flex;
   flex-direction: column;
@@ -173,12 +184,38 @@
   grid-area: finder;
   padding: 65px 74px;
   background: #fff;
+  background-image: url(./assets/big-arrow-finder.svg);
+  background-position: right bottom;
+   background-repeat: no-repeat;
   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  cursor: pointer;
   min-height: 500px;
   display: flex;
   flex-direction: column;
+}
+
+.App-section-ctas-owner:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.2s ease-in-out; /** Firefox **/
+  -o-transition: all 0.2s ease-in-out; /** Opera **/
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px); /** Chrome & Safari **/
+  -o-transform: translate(0, -10px); /** Opera **/
+  -moz-transform: translate(0, -10px); /** Firefox **/
+}
+
+.App-section-ctas-finder:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.2s ease-in-out; /** Firefox **/
+  -o-transition: all 0.2s ease-in-out; /** Opera **/
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px); /** Chrome & Safari **/
+  -o-transform: translate(0, -10px); /** Opera **/
+  -moz-transform: translate(0, -10px); /** Firefox **/
 }
 
 .App-section-ctas-header-top {
@@ -200,11 +237,118 @@
 }
 
 .App-section-ctas-link {
-  text-align: right;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
 }
+
+
+.App-section-technology {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  grid-template-areas:
+    'title1 title1 title1'
+    'escrow privacy blockchain';
+  font-family: 'Raleway', sans-serif;
+  background: #fff;
+  text-align: center;
+}
+
+.App-section-technology-h2 {
+  grid-area: title1;  
+  font-family: Roboto;
+  font-weight: lighter;
+  font-size: 50px;
+  line-height: normal;
+  color: #14213D;
+  margin-top: 130px;
+  margin-bottom: 30px;
+}
+
+.App-section-technology-card {
+  padding: 40px;
+  transition: box-shadow 0.3s;
+}
+
+.App-section-technology-escrow {
+  grid-area: escrow;
+  padding: 40px;
+  transition: box-shadow 0.3s;
+}
+
+.App-section-technology-icon {
+  min-height: 58px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(./assets/shield-icon.svg);
+}
+
+.App-section-technology-escrow-icon {
+  background-image: url(./assets/shield-icon.svg);
+}
+
+.App-section-technology-privacy-icon {
+  background-image: url(./assets/user-shield-icon.svg);
+}
+
+.App-section-technology-blockchain-icon {
+  background-image: url(./assets/stream-icon.svg);
+}
+
+.App-section-technology-privacy {
+  grid-area: privacy;
+  padding: 40px;
+  transition: box-shadow 0.3s;
+}
+
+.App-section-technology-blockchain {
+  grid-area: blockchain;
+  padding: 40px;
+  transition: box-shadow 0.3s;
+}
+
+.App-section-technology-card:hover {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.App-section-technology-card:hover p {
+  color: #14213D;
+  color: #555;
+}
+.App-section-technology-card:hover h3:after {
+  width: 25px;
+}
+
+.App-section-technology h3 {
+  color: #6f6f6f;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 100;
+  transition: color 0.3s;
+}
+.App-section-technology h3:after {
+  content: '';
+  position: relative;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #6f6f6f;
+  transition: width 0.3s;
+}
+.App-section-technology p {
+  color: #a2a2a2;
+  text-align: left;
+  text-indent: 1em;
+  font-size: 16px;
+  line-height: 26px;
+  transition: color 0.3s;
+}
+
 
 @media (max-width: 48em) {
   .App-header-menu {
@@ -265,6 +409,15 @@
     grid-template-areas:
       'owner'
       'finder';
+  }
+
+  .App-section-technology {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'title1'
+      'escrow'
+      'privacy'
+      'blockchain';
   }
 }
 
