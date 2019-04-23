@@ -41,7 +41,7 @@ const App = () => {
               <TextLoop mask={true} interval={1400}>
                 <span>Smartphone.</span>
                 <span>Wallet.</span>
-                <span>Pet.</span>
+                <span>Pets.</span>
                 <span>Keys.</span>
                 <span>Wallet.</span>
                 <span>Bag.</span>
