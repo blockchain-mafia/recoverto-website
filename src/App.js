@@ -140,17 +140,28 @@ const App = () => {
           <div className="App-section-useCases-card App-section-useCases-key">
             <div className="App-section-useCases-icon App-section-useCases-key-icon">{' '}</div>
             <h3>Private Keys</h3>
-            <p>Prevent your crypto wallet/keys (computer, smartphone, hardware ledger) against loss. Jaxx Metamask. </p>
+            <p>
+              If you have private keys registered on Metamask, Jaxx or other hot wallets and 
+              you have not kept your private keys on another support this service can be 
+              very useful if you lose your device.
+            </p>
           </div>   
           <div className="App-section-useCases-card App-section-useCases-work">
             <div className="App-section-useCases-icon App-section-useCases-work-icon">{' '}</div>
             <h3>Work</h3>
-            <p>Your personnal data are encrypted and they are only accessible for the person who found your item.</p>
+            <p>
+              Sometimes our work such as writing a thesis, courses, a presentation is only recorded
+              on our computer. Its loss will result in the loss of many hours of work. 
+              Warning your computer against loss can be very convenient.
+            </p>
           </div>
           <div className="App-section-useCases-card App-section-useCases-personnalData">
             <div className="App-section-useCases-icon App-section-useCases-personnalData-icon">{' '}</div>
             <h3>Personnal Data</h3>
-            <p>This is a project based on Ethereum and Kleros to guarentee the resiliance of the application and to enforce the reward.</p>
+            <p>
+              Some personal data such as pictures of the last holiday, his notebook or private messages can be 
+              very important. Here is a service that allows you to prevent the loss of this data.
+            </p>
           </div>
         </div>
       </section>
