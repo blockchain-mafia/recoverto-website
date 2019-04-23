@@ -3,6 +3,9 @@ import { slide as Menu } from 'react-burger-menu'
 import TextLoop from 'react-text-loop'
 import Collapsible from 'react-collapsible'
 
+import telegram from './assets/telegram.svg'
+import github from './assets/github.svg'
+
 import './App.css'
 
 const App = () => {
@@ -23,9 +26,10 @@ const App = () => {
       <div className={`App-header-menu ${isTop ? 'App-header-menu__isTop' : ''}`}>
         <div className="App-header-menu-logo">RECOVER</div>
         <Menu right>
-          <a id="home" className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
-          <a id="contact" className="menu-item" href="/contact">Contact</a>
+          <a id="app" className="menu-item" href="https://app.recover.to">APPLICATION</a>
+          <a id="add" className="menu-item" href="https://app.recover.to">ADD ITEM</a>
+          <a id="claim" className="menu-item" href="https://app.recover.to">CLAIM ITEM</a>
+          <a id="telegram" className="menu-item" href="https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g">TELEGRAM</a>
         </Menu>
       </div>
       <header className="App-header">
@@ -44,14 +48,14 @@ const App = () => {
               </TextLoop>
             </div>
             <div className="App-header-wrapper-content-buttons">
-              <button>Learn More</button>
+              <a href="#App-section-how-h2">Learn More</a>
               <div className="App-header-wrapper-content-buttons-space">{' '}</div>
-              <button className="btn-solid">Safe your item</button>
+              <a className="btn-solid" href="https://app.recover.to">Safe your item</a>
             </div>
           </div>
       </header>
       <section className="App-section App-section-how">
-        <h2 className="App-section-how-h2">
+        <h2 id="App-section-how-h2" className="App-section-how-h2">
           A SIMPLE WORKFLOW TO<br /> 
           RECOVER YOUR ITEM 
         </h2>
@@ -75,7 +79,7 @@ const App = () => {
         </div>
       </section>
       <section className='App-section App-section-ctas'>
-        <div className='App-section-ctas-owner'>
+        <div className='App-section-ctas-owner' onClick={e => {window.location.href = 'https://app.recover.to'}}>
           <div className='App-section-ctas-header-top'>
             OWNER
           </div>
@@ -89,8 +93,8 @@ const App = () => {
             SAFE YOUR ITEM
           </div>
         </div>
-        <div className='App-section-ctas-finder'>
-        <div className='App-section-ctas-header-top'>
+        <div className='App-section-ctas-finder' onClick={e => {window.location.href = 'https://app.recover.to'}}>
+          <div className='App-section-ctas-header-top'>
             FINDER
           </div>
           <header className='App-section-ctas-header'>
@@ -131,6 +135,7 @@ const App = () => {
             YOUR DATA ARE MORE IMPORTANT<br /> 
             THAN YOUR DEVICE
           </h2>
+          <h4 className="App-section-useCases-h4">SAFE DATA LIKE YOUR ...</h4>
           <div className="App-section-useCases-card App-section-useCases-key">
             <div className="App-section-useCases-icon App-section-useCases-key-icon">{' '}</div>
             <h3>Private Keys</h3>
@@ -149,26 +154,89 @@ const App = () => {
         </div>
       </section>
       <section className="App-section App-section-faq">
-        <h2 className="App-section-faq-h2">FAQ</h2>
-        <Collapsible trigger="Why we don't use a password instead of a private code in the Qr Code?">
-          <p>This is the collapsible content. It can be any element or React component you like.</p>
-          <p>also prevent ddos</p>
-          <p>fund finder</p>
-        </Collapsible>
-        <Collapsible trigger="Why the contact information are not directly visible on the Qr Code?">
-          <p>This is the collapsible content. It can be any element or React component you like.</p>
-          <p>It can even be another Collapsible component. Check out the next section!</p>
-        </Collapsible>
-        <Collapsible trigger="Is there a notification service when we clam a found?">
-          <p>This is the collapsible content. It can be any element or React component you like.</p>
-          <p>It can even be another Collapsible component. Check out the next section!</p>
-        </Collapsible>
-        <Collapsible trigger="Ou puis je trouver des stickers imprimables?">
-          <p>This is the collapsible content. It can be any element or React component you like.</p>
-          <p>It can even be another Collapsible component. Check out the next section!</p>
-        </Collapsible>
+        <div>
+          <h2 className="App-section-faq-h2">FAQ</h2>
+        </div>
+        <div>
+          <Collapsible trigger="Is this application completely decentralized?">
+            <p>Yes, all the logic of the application is programmed on a smart contract.</p>
+            <p>To record encrypted contact information we will use our own IPFS node but you can use yours.</p>
+            <p>
+              Optional services are centralized such as email notifications when an object is found.
+              It is possible for the user to bypass his services and do it manually.
+            </p>
+          </Collapsible>
+        </div>
+        <div>
+          <Collapsible trigger="How it works if the finder is not a cryptoenthousiast?">
+            <p>
+              It is possible to prefund the function for claiming an item to find which avoids the finder having
+              to have Ether to pay for the gas of the "Claim" function.
+            </p>
+            <p>
+              On the other hand, we automatically generate an Ethereum key pair if the user does not have one
+              and use metatransactions to publish the transaction to claim the item.
+            </p>
+          </Collapsible>
+        </div>
+        <div>
+          <Collapsible trigger="Is it possible for a regular user to record an item?">
+          <p>For the moment no but we are integrating this feature in future versions.</p>
+          </Collapsible>
+        </div>
+        <div>
+          <Collapsible trigger="What happens if the user wants to be rewarded in fiat?">
+            <p>
+              With this release it is not possible to reward him directly in fiat.
+            </p>
+            <p>
+              You have to make an arrangement with the finder to do this.
+            </p>
+          </Collapsible>
+        </div>
+        <div>
+          <Collapsible trigger="Why the contact information are not directly visible on the Qr Code?">
+            <p>This avoids showing your personal information directly.</p>
+          </Collapsible>
+        </div>
+        <div>
+          <Collapsible trigger="Is there a notification service when we claim a found?">
+            <p>
+              Yes, the owner receives an email notification if he/she has subscribed to this service
+              but it is preferable to contact him/her also with the contact information he/she
+              has provided to maximize your chances to get the reward.
+            </p>
+          </Collapsible>
+        </div>
+        <div>
+          <Collapsible trigger="Where do I put the sticker?">
+          <p>
+            Ideally it is good to put it in a place that is neither too visible nor too hidden.
+            Indeed, it should be avoided that the scan of the QR code is too accessible if not someone
+            to have access to your data when the object is not lost but it must be visible enough to
+            if the object is lost a person can see it.
+          </p>
+          </Collapsible>
+        </div>
+        <div>
+          <Collapsible trigger="What happens if the finder does not want a reward?">
+            <p>
+              He has the possibility to refund all or part of the reward if he wishes.
+            </p>
+          </Collapsible>
+        </div>
+        <div>
+          <Collapsible trigger="What happens if one of the parties does not respect its commitments?">
+            <p>
+              After trying to resolve the problem in a friendly way it is possible to create a dispute on Kleros 
+              to arbitrate the dispute to handle the funds.
+            </p>
+          </Collapsible>
+        </div>
       </section>
       <footer className="App-footer">
+        <img onClick={e => {window.location.href = 'https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g'}} src={telegram} className="App-footer-telegram" />
+        <img onClick={e => {window.location.href = 'https://github.com/blockchain-mafia/recoverto-contracts'}} src={github} className="App-footer-github" />
         @ 2019 RECOVER
       </footer>
     </div>

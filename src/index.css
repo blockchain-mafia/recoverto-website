@@ -78,6 +78,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: inline-block;
 }
 
+.bm-item-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-family: RadnikaBold;
+  line-height: 40px;
+  outline: 0;
+}
+
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 1);
@@ -88,8 +97,4 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .bm-burger-button {
     right: 20px;
   }
-}
-
-img {
-  object-fit: contain;
 }

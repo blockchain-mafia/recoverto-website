@@ -60,7 +60,9 @@
   top: 16vh;
 }
 
-.App-header-wrapper-content-buttons button {
+.App-header-wrapper-content-buttons a {
+  display: inline-block;
+  text-decoration: none;
   font-family: Roboto;
   font-weight: 500;
   font-size: 18px;
@@ -72,7 +74,12 @@
   line-height: 60px;
 }
 
-.App-header-wrapper-content-buttons button.btn-solid {
+.App-header-wrapper-content-buttons a:hover, .App-header-wrapper-content-buttons a.btn-solid:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.App-header-wrapper-content-buttons a.btn-solid {
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -89,6 +96,7 @@
 
 .App-section-how {
   position: relative;
+  top: -60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0 30px;
@@ -99,7 +107,7 @@
 }
 
 .App-section-how-h2 {
-  margin-bottom: 40px;
+  padding-top: 60px;
   grid-area: title;
   font-family: Roboto;
   font-weight: lighter;
@@ -242,7 +250,6 @@
   font-weight: 500;
 }
 
-
 .App-section-technology {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -362,6 +369,7 @@
   grid-gap: 0;
   grid-template-areas:
     'title2 title2 title2'
+    'title3 title3 title3'
     'key work personnalData';
   font-family: Nunito;
 }
@@ -369,6 +377,15 @@
 .App-section-useCases-h2 {
   grid-area: title2;
   margin-bottom: 40px;
+}
+
+.App-section-useCases-h4 {
+  grid-area: title3;
+  text-align: center;
+  font-family: Nunito;
+  font-weight: 300;
+  font-size: 28px;
+  color: #444;
 }
 
 .App-section-useCases-key {
@@ -436,6 +453,11 @@
   .Collapsible__trigger.is-open:after {
     transform: rotateZ(180deg); }
 
+.App-section-faq {
+  display: flex;
+  flex-direction: column;
+}
+
 .App-footer {
   margin-top: 200px;
   background: #F2F2F2;
@@ -444,6 +466,22 @@
   line-height: 52px;
   text-align: center;
   color: #CFCFCF;
+  padding: 0 5em;
+}
+
+.App-footer-telegram {
+  position: absolute;
+  left: 5em;
+  padding: 10px 20px 0 0;
+  cursor: pointer;
+}
+
+.App-footer-github {
+  padding: 10px 20px 0 0;
+  position: absolute;
+  left: calc(5em + 50px);
+  margin-top: 2px;
+  cursor: pointer;
 }
 
 @media (max-width: 48em) {
@@ -457,7 +495,7 @@
     padding-left: 20px;
   }
 
-  .App-header-wrapper-content{
+  .App-header-wrapper-content {
     position: absolute;
     top: 30vh;
     font-size: 32px;
@@ -467,18 +505,18 @@
     top: 18vh;
   }
   
-  .App-header-wrapper-content-buttons button {
-    width: 90vw;
+  .App-header-wrapper-content-buttons a {
+    width: 50vw;
     margin-top: 3vh;
   }
 
-  .App-header-wrapper-content-buttons-space{
+  .App-header-wrapper-content-buttons-space {
     display: none;
   }
 
-  .App-section-h2 {
+  .App-section-how-h2 {
     width: 100%;
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
   }
 
@@ -498,13 +536,30 @@
   }
 
   .App-section-ctas { /* create new div with btns display switch */
-    margin-top: 140px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 0;
     grid-template-areas:
       'owner'
       'finder';
+  }
+
+  .App-section-ctas-owner {
+    padding: 35px 30px;
+    margin-bottom: 30px;
+  }
+
+  .App-section-ctas-finder {
+    padding: 35px 30px;
+  }
+
+  .App-section-ctas-header {
+    font-size: 24px;
+  }
+
+  .App-section-ctas-content {
+    font-size: 18px;
   }
 
   .App-section-technology {
@@ -516,12 +571,44 @@
       'blockchain';
   }
 
+  .App-section-technology-h2 {
+    font-size: 30px;
+  }
+
+  .App-section-useCases-wrapper {
+    background-size: cover;
+    padding-bottom: 150px;
+  }
+
+  .App-section-useCases-h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .App-section-useCases-h4 {
+    font-size: 24px;
+  }
+
   .App-section-useCases {
     grid-template-areas:
       'title2'
+      'title3'
       'key'
       'work'
       'personnalData';
+  }
+
+  .App-section-faq-h2 {
+    margin-top: 0;
+    font-size: 40px;
+  }
+
+  .Collapsible__trigger {
+    font-size: 20px;
+  }
+
+  .App-footer-telegram, .App-footer-github {
+    display: none;
   }
 }
 
