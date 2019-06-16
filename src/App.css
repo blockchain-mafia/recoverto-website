@@ -48,11 +48,17 @@
 
 .App-header-wrapper-content {
   position: relative;
-  top: -18vh;
+  top: -14vh;
   text-align: center;
   font-family: Nunito;
   font-weight: bold;
   font-size: 60px;
+}
+
+.App-header-wrapper-content-subtitle {
+  padding-top: 5vh;
+  font-weight: lighter;
+  font-size: 30px;
 }
 
 .App-header-wrapper-content-buttons {
@@ -500,6 +506,11 @@
     top: 30vh;
     font-size: 32px;
   }
+
+  .App-header-wrapper-content-subtitle {
+    font-size: 26px;
+  }
+
   .App-header-wrapper-content-buttons {
     position: relative;
     top: 18vh;

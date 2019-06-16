@@ -48,6 +48,7 @@ const App = () => {
                 <span>Tablet.</span>
               </TextLoop>
             </div>
+            <div className="App-header-wrapper-content-subtitle">Prevent its objects from loss.</div>
             <div className="App-header-wrapper-content-buttons">
               <a href="#App-section-how-h2">Learn More</a>
               <div className="App-header-wrapper-content-buttons-space">{' '}</div>
@@ -170,6 +171,41 @@ const App = () => {
           <h2 className="App-section-faq-h2">FAQ</h2>
         </div>
         <div>
+          <Collapsible trigger="Why use blockchain?">
+            <p>For five main reasons:</p>
+            <ol>
+              <li>
+                The service will always be accessible even if the 
+                recover.to servers are down it will still be possible 
+                to use this service by making requests directly on the blockchain.
+              </li>
+              <li>
+                There are no intermediaries, which means that costs 
+                are low. All you need to do is pay the transaction fees 
+                (called gas) to use this service.
+              </li>
+              <li>
+                We do not need to trust a third party service. This is 
+                called a trustless service. The thing you trust is the 
+                Ethereum protocol and the smart contracts 
+                (<a href="https://etherscan.io/address/0x02C86846887faa1d964a838Dc50739B49c8329bc#contracts">Recover</a>&nbsp;
+                and <a href="https://etherscan.io/address/0x988b3A538b618C7A603e1c11Ab82Cd16dbE28069#code">Kleros</a>). 
+                These contracts are public and you can audit them 
+                (technical skills required).
+              </li>
+              <li>
+                Ethereum makes it easy to make valuable microtransactions, 
+                which makes it possible to give a reward to the finder easily.
+              </li>
+              <li>
+                The blockchain is interoperable with third-party services as 
+                companies can easily use this service to plug their items 
+                with lost and found service.
+              </li>
+            </ol>
+          </Collapsible>
+        </div>
+        <div>
           <Collapsible trigger="Is this application completely decentralized?">
             <p>Yes, all the logic of the application is programmed on a smart contract.</p>
             <p>To record encrypted contact information we will use our own IPFS node but you can use yours.</p>
@@ -186,8 +222,7 @@ const App = () => {
               to have Ether to pay for the gas of the "Claim" function.
             </p>
             <p>
-              On the other hand, we automatically generate an Ethereum key pair if the user does not have one
-              and use metatransactions to publish the transaction to claim the item.
+              On the other hand, we automatically generate an Ethereum Wallet if the user does not have one.
             </p>
           </Collapsible>
         </div>
