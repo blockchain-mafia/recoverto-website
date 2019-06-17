@@ -48,7 +48,9 @@ const App = () => {
                 <span>Tablet.</span>
               </TextLoop>
             </div>
-            <div className="App-header-wrapper-content-subtitle">Prevent its objects from loss.</div>
+            <div className="App-header-wrapper-content-subtitle">
+              Protect your items from loss
+            </div>
             <div className="App-header-wrapper-content-buttons">
               <a href="#App-section-how-h2">Learn More</a>
               <div className="App-header-wrapper-content-buttons-space">{' '}</div>
