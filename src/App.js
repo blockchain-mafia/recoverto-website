@@ -39,13 +39,16 @@ const App = () => {
             <div>
               for {' '}
               <TextLoop mask={true} interval={1400}>
-                <span>Smartphone.</span>
-                <span>Wallet.</span>
-                <span>Pets.</span>
-                <span>Keys.</span>
-                <span>Wallet.</span>
-                <span>Bag.</span>
-                <span>Tablet.</span>
+                <span>Phone</span>
+                <span>Wallet</span>
+                <span>Pets</span>
+                <span>Keys</span>
+                <span>Wallet</span>
+                <span>Bag</span>
+                <span>Tablet</span>
+                <span>Ledger</span>
+                <span>Luggage</span>
+                <span>AirPods</span>
               </TextLoop>
             </div>
             <div className="App-header-wrapper-content-subtitle">
