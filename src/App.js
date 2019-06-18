@@ -204,7 +204,7 @@ const App = () => {
               <li>
                 The blockchain is interoperable with third-party services as 
                 companies can easily use this service to plug their items 
-                with lost and found service.
+                with this lost and found service.
               </li>
             </ol>
           </Collapsible>
