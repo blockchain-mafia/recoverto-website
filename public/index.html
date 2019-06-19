@@ -30,8 +30,10 @@
     <div id="root"></div>
     <!-- Netlify Form -->
     <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <p class="hidden"><label>Don’t fill this out if you're human: <input name="__bf"/></label></p>
-      <p><input type="email" name="email"/></p>
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <input type="email" name="email"/>
     </form>
     <!--
       This HTML file is a template.
