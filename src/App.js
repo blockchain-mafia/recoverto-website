@@ -8,18 +8,35 @@ import github from './assets/github.svg'
 
 import './App.css'
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 const App = () => {
   const [isTop, setTop] = useState(true)
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
-      if (window.scrollY < 30 !== isTop) {
+      if ((window.scrollY < 30) !== isTop) {
         setTop(false)
       } else {
         setTop(true)
       }
     })
   }, [])
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    fetch("/?no-cache=1", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": 'contact', email: 'wagner@nicolas.com' })
+    })
+      .then(res => res.ok ? alert('success') : alert('err'))
+      .catch(err => {console.error(err); alert('err')}) 
+  }
 
   return (
     <div className="App">
@@ -284,6 +301,18 @@ const App = () => {
             </p>
           </Collapsible>
         </div>
+      </section>
+      <section>
+        <form onSubmit={handleSubmit} name="contact">
+          <p>
+            <label>
+              Your Email: <input type="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
       </section>
       <footer className="App-footer">
         <img onClick={e => {window.location.href = 'https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g'}} src={telegram} className="App-footer-telegram" />
