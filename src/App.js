@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import TextLoop from 'react-text-loop'
+import ReactTyped from 'react-typed'
 import Collapsible from 'react-collapsible'
 
 import telegram from './assets/telegram.svg'
 import github from './assets/github.svg'
+import pet from './assets/pet.svg'
+import tablet from './assets/tablet.svg'
+import suitcase from './assets/suitcase.svg'
+import key from './assets/key.svg'
+import laptop from './assets/laptop.svg'
+import phone from './assets/phone.svg'
+import wallet from './assets/wallet.svg'
 
 import './App.css'
 
@@ -27,6 +35,7 @@ const App = () => {
     })
   }, [])
 
+  // TODO: fix handleInput and show box Email saved
   const handleSubmit = e => {
     e.preventDefault()
     fetch("/?no-cache=1", {
@@ -303,16 +312,99 @@ const App = () => {
         </div>
       </section>
       <section>
-        <form onSubmit={handleSubmit} name="contact">
-          <p>
-            <label>
-              Your Email: <input type="email" name="email" />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+        <div className='App-banner-container-full'>
+          <h2 className='App-banner'>BUIDL* ON ETHEREUM & KLEROS</h2>
+          <div className='App-banner-container'>
+            <div className='App-banner-container-icons'>
+              <img src={laptop} className="App-banner-icon" alt="find-laptop" />
+              <img src={key} className="App-banner-icon" alt="find-key" />
+              <img src={suitcase} className="App-banner-icon" alt="find-suitcase" />
+              <img src={tablet} className="App-banner-icon" alt="find-tablet" />
+              <img src={wallet} className="App-banner-icon" alt="find-wallet" />
+              <img src={pet} className="App-banner-icon" alt="find-pet" />
+              <img src={phone} className="App-banner-icon" alt="find-phone" />
+            </div>
+            <h2 className='App-banner-container-item'>FOR {' '}
+              <ReactTyped
+                loop
+                typeSpeed={90}
+                backSpeed={70}
+                strings={[
+                  "PHONE", 
+                  "WALLET", 
+                  "PETS",
+                  "KEYS", 
+                  "BAG", 
+                  "TABLET",
+                  "LEDGER",
+                  "LUGGAGE",
+                  "AIRPODS"
+                ]}
+                smartBackspace
+                shuffle={false}
+                backDelay={1000}
+                fadeOut={false}
+                fadeOutDelay={100}
+                loopCount={0}
+                showCursor
+                cursorChar="|"
+              />
+            </h2>
+          </div>
+          {/* TODO container to avoid the tooltip on all */}
+          <div className="App-tooltip">*BUILD
+            <span className="App-tooltiptext">
+              BUIDL is a modification of HODL which means "hold on for dear life", 
+              which refers to investment, especially cryptocurrency. 
+              The BUIDL modification means "Build Useful Stuff" and refers to 
+              Blockchain technology and its development.
+            </span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="App-cta-container">
+          {/* TODO redirect /new */}
+          <div className="App-cta-container-cards App-cta-container-free">
+            <h3 className="App-cta-container-cards-title">FREE</h3>
+            <ul>
+              <li>Unlimited QR Code</li>
+              <li>Email Notification</li>
+              <li>SMS Notification</li>
+            </ul>
+          </div>
+          <div className="App-cta-container-cards App-cta-container-loser">
+            <h3 className="App-cta-container-cards-title App-cta-container-cards-title-white">LOSER PACK</h3>
+            <ul>
+              <li>Email Notification</li>
+              <li>SMS Notification</li>
+              <li>Stickers</li>
+              <li>Card</li>
+              <li>Keyring</li>
+              <li>Qr Code Prefunded</li>
+              <li>Priority Support</li>
+            </ul>
+            <form className="App-cta-container-cards-form" onSubmit={handleSubmit} name="contact">
+              <input placeholder="@" className="App-cta-container-cards-input" type="email" name="email" />
+              <button className="App-cta-container-cards-btn" type="submit">Stay Tuned</button>
+            </form>
+          </div>
+          {/* TODO open mail contact@recover */}
+          <div className="App-cta-container-cards App-cta-container-company">
+            <h3 className="App-cta-container-cards-title">COMPANY</h3>
+            <ul>
+              <li>Unlimited QR Code</li>
+              <li>API access</li>
+              <li>Qr Code Prefunded</li>
+              <li>Priority Support</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="App-quote-container">
+          <blockquote className="App-quote">USE IT OR LOSE IT</blockquote>
+        </div>
       </section>
       <footer className="App-footer">
         <img onClick={e => {window.location.href = 'https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g'}} src={telegram} className="App-footer-telegram" />

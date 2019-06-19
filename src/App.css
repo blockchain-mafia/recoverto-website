@@ -448,30 +448,303 @@
   padding: 10px 0;
   padding-right: 48px;
 }
-  .Collapsible__trigger:after {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f358';
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    display: block;
-    transition: transform 300ms; }
-  .Collapsible__trigger.is-open:after {
-    transform: rotateZ(180deg); }
+
+.Collapsible__trigger:after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f358';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  transition: transform 300ms; 
+}
+
+.Collapsible__trigger.is-open:after {
+  transform: rotateZ(180deg); 
+}
 
 .App-section-faq {
   display: flex;
   flex-direction: column;
 }
 
+.App-banner {
+  overflow: hidden;
+  margin: 14vh 0 0 0;
+  position: relative;
+  left: 0;
+  color: #fff;
+  width: 100vw;
+  overflow: hidden;
+  line-height: -3px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 54px;
+  color: #fff;
+}
+
+.App-banner::before {
+  overflow: hidden;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -50vw;
+  right: 8vw;
+  bottom: 0;
+  background: linear-gradient(90deg, #12c2e9 0%, #a6ffcb 156.86%);
+  z-index: -1;
+  transform: skew(-45deg);
+}
+
+.App-banner-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.App-banner-container-icons {
+  margin: 10px 0 0 0;
+  width: 50vw;
+}
+
+.App-banner-container-item {
+  overflow: hidden;
+  width: 24vw;
+  margin: 10px 0 0 0;
+  position: relative;
+  right: -8px;
+  color: #fff;
+  width: 50vw;
+  line-height: -3px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 54px;
+  text-align: left;
+  padding-left: 14vw;
+}
+
+.App-banner-container-item::before {
+  overflow: hidden;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -50vw;
+  left: 10vw;
+  bottom: 0;
+  background: linear-gradient(270deg, #a6ffcb -105.1%, #12c2e9 272.14%);
+  z-index: -1;
+  transform: skew(-45deg);
+}
+
+.App-banner-icon {
+  position: relative;
+  left: 4vw;
+  height: 30px;
+  padding: 10px 3.5vw 0 0;
+}
+
+/* Tooltip container */
+.App-tooltip {
+  float: right;
+  position: relative;
+  color: #ccc;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  padding-right: 0.1vw;
+  cursor: pointer;
+
+}
+
+/* Tooltip text */
+.App-tooltip .App-tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  width: 500px;
+  font-weight: lighter;
+  font-family: Nunito;
+  padding: 10px 20px;
+  position: absolute;
+  top: -30px;
+  right: 70px;
+  z-index: 1;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.App-tooltip:hover .App-tooltiptext {
+  visibility: visible;
+}
+
+.App-cta-container {
+  margin-top: 90px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.App-cta-container-cards {
+  background: #fff;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  min-height: 480px;
+  width: 375px;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 19px;
+  color: #444;
+  padding: 0 45px;
+  box-sizing: border-box;
+}
+
+.App-cta-container-cards ul {
+  padding-bottom: 15px;
+}
+
+.App-cta-container-cards li {
+  list-style-image: url(./assets/check.svg);
+  padding: 2px 0 2px 10px;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.App-cta-container-loser li {
+  color: #fff;
+  list-style-image: url(./assets/check-white.svg);
+}
+
+.App-cta-container-cards-form {
+  box-shadow: 3px 3px 30px #ccc;
+  border-radius: 50px;
+  height: 51px;
+  background: #fff;
+  transition: all .2s ease-in-out;
+}
+
+.App-cta-container-cards-form:hover {
+  transform: scale(2);
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.App-cta-container-cards-input {
+  display: inline-block;
+  background: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px 0 0 50px;
+  line-height: 43px;
+  width: 185px;
+  outline: 0;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: Nunito;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+input:invalid {
+  box-shadow: none;
+}
+
+.App-cta-container-cards-btn {
+  margin: 0;
+  box-sizing: border-box;
+  float: right;
+  background: #fff;
+  border: 3px solid #fff;
+  line-height: 43px;
+  width: 100px;
+  outline: 0;
+  font-size: 14px;
+  font-family: Roboto;
+  padding: 0;
+  padding: 1px 1px 1px 10px;
+  position: relative;
+  border-radius: 50px;
+  background: #12C2e9;
+  color: #fff;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+
+.App-cta-container-cards-btn:hover {
+  background: #a6ffcb;
+}
+
+.App-cta-container-cards-title {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  color: #c8c8c8;
+}
+
+.App-cta-container-cards-title-white {
+  color: #fff;
+}
+
+.App-cta-container-free {
+  margin-left: 5vw;
+}
+
+.App-cta-container-loser {
+  background: linear-gradient(229.83deg, #12C2E9 56.82%, #A6FFCB 132.41%);
+}
+
+.App-cta-container-company {
+  margin-right: 5vw;
+}
+
+.App-quote-container {
+  margin-top: 90px;
+  text-align: center;
+  line-height: 50px;
+  height: 150px;
+}
+
+.App-quote {
+  font-family: Nunito;
+  font-size: 40px;
+  color: rgba(68, 68, 68, 0.5);
+  font-weight: bold;
+  margin-left: -55px;
+}
+
+.App-quote:before {
+  font-weight: normal;
+  position: relative;
+  top: 80px;
+  content: '\201C';
+  color: #e7e6e4;
+  font-size: 6em;
+  z-index: -1;
+}
+
 .App-footer {
-  margin-top: 200px;
-  background: #F2F2F2;
+  margin-top: 80px;
+  background: #f2f2f2;
   line-height: 52px;
   font-size: 14px;
   line-height: 52px;
   text-align: center;
-  color: #CFCFCF;
+  color: #cfcfcf;
   padding: 0 5em;
 }
 
@@ -616,6 +889,26 @@
 
   .Collapsible__trigger {
     font-size: 20px;
+  }
+
+  .App-banner-container-full {
+    display: none;
+  }
+
+  .App-cta-container-free {
+    display: none;
+  }
+  
+  .App-cta-container-loser {
+
+  }
+  
+  .App-cta-container-company {
+    display: none;
+  }
+
+  .App-quote-container {
+    display: none;
   }
 
   .App-footer-telegram, .App-footer-github {
