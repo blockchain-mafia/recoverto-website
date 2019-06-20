@@ -3,6 +3,7 @@ import { slide as Menu } from 'react-burger-menu'
 import TextLoop from 'react-text-loop'
 import ReactTyped from 'react-typed'
 import Collapsible from 'react-collapsible'
+import Modal from 'react-responsive-modal'
 
 import telegram from './assets/telegram.svg'
 import github from './assets/github.svg'
@@ -24,6 +25,8 @@ const encode = (data) => {
 
 const App = () => {
   const [isTop, setTop] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
+  const [email, setEmail] = useState('')
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
@@ -35,20 +38,33 @@ const App = () => {
     })
   }, [])
 
-  // TODO: fix handleInput and show box Email saved
   const handleSubmit = e => {
     e.preventDefault()
     fetch("/?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": 'contact', email: 'wagner@nicolas.com' })
+      body: encode({ "form-name": 'contact', email })
     })
-      .then(res => res.ok ? alert('success') : alert('err'))
-      .catch(err => {console.error(err); alert('err')}) 
+      .then(res => res.ok ? setIsOpen(true) : alert('Email error.'))
+      .catch(err => alert('Email error.'))
   }
 
   return (
     <div className="App">
+      {/* Add modal ?email confirmation=email@example.com */}
+      <Modal
+        focusTrapped={false}
+        open={isOpen} 
+        onClose={() => setIsOpen(false)} 
+        center
+        styles={{
+          closeButton: {background: 'transparent'},
+          modal: {width: '80vw', maxWidth: '300px', padding: '6vh 3vw'}
+        }}
+      >
+        <h1>Email Confirmation</h1>
+        <p>An email has been sent to {email} to confirm your email address.</p>
+      </Modal>
       <div className={`App-header-menu ${isTop ? 'App-header-menu__isTop' : ''}`}>
         <div className="App-header-menu-logo">RECOVER</div>
         <Menu right>
@@ -374,7 +390,10 @@ const App = () => {
       <section>
         <div className="App-cta-container">
           {/* TODO redirect /new */}
-          <div className="App-cta-container-cards App-cta-container-free">
+          <div 
+            className="App-cta-container-cards App-cta-container-free"
+            onClick={() => window.location.replace("https://recover.to/new")}
+          >
             <h3 className="App-cta-container-cards-title">FREE</h3>
             <ul>
               <li>Unlimited QR Code</li>
@@ -394,7 +413,14 @@ const App = () => {
               <li>Priority Support</li>
             </ul>
             <form className="App-cta-container-cards-form" onSubmit={handleSubmit} name="contact">
-              <input placeholder="@" className="App-cta-container-cards-input" type="email" name="email" />
+              <input 
+                placeholder="@" 
+                className="App-cta-container-cards-input" 
+                type="email" 
+                name="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
               <button className="App-cta-container-cards-btn" type="submit">Stay Tuned</button>
             </form>
           </div>
