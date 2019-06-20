@@ -633,17 +633,21 @@
   height: 51px;
   background: #fff;
   transition: all .2s ease-in-out;
+  overflow: visible;
+  position: absolute;
 }
 
 .App-cta-container-cards-form:hover {
   transform: scale(2);
 }
 
-.grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
+.App-cta-container-cards-form:hover .App-cta-container-cards-input {
+  width: 280px;
+}
 
 .App-cta-container-cards-input {
-  display: inline-block;
+  transition: all .2s ease-in-out;
+  display: inline;
   background: #fff;
   border: 3px solid #fff;
   border-radius: 50px 0 0 50px;
@@ -662,6 +666,7 @@ input:invalid {
 }
 
 .App-cta-container-cards-btn {
+  display: inline;
   margin: 0;
   box-sizing: border-box;
   float: right;
