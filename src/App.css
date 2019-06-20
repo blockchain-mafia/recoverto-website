@@ -896,6 +896,14 @@ input:invalid {
     font-size: 20px;
   }
 
+  .App-cta-container-cards-form:hover {
+    transform: none;
+  }
+
+  .App-cta-container-cards-form:hover .App-cta-container-cards-input {
+    width: 185px;
+  }
+
   .App-banner-container-full {
     display: none;
   }
