@@ -49,6 +49,8 @@ const App = () => {
       .catch(err => alert('Email error.'))
   }
 
+    // TODO: add lambda function to confirm email and show message: Your email is confirmed
+
   return (
     <div className="App">
       {/* Add modal ?email confirmation=email@example.com */}
