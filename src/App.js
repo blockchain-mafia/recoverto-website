@@ -243,6 +243,11 @@ const App = () => {
               Optional services are centralized such as email notifications when an object is found.
               It is possible for the user to bypass his services and do it manually.
             </p>
+            <p>
+              On the other hand, if you use a third party service to print your Qr Code 
+              it will be able to read the encrypted data. You must have a minimum of trust 
+              in this service.
+            </p>
           </Collapsible>
         </div>
         <div>
@@ -258,7 +263,11 @@ const App = () => {
         </div>
         <div>
           <Collapsible trigger="Is it possible for a regular user to record an item?">
-          <p>For the moment no but we are integrating this feature in future versions.</p>
+            <p>
+              Not really, currently it is only possible to add items 
+              if you know how to use <a href="https://metamask.io/">Metamask</a>.
+            </p>
+            <p>We are integrating this feature, add item without Metamask, in future versions.</p>
           </Collapsible>
         </div>
         <div>
