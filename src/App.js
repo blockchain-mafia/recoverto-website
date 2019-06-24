@@ -26,6 +26,7 @@ const encode = (data) => {
 const App = () => {
   const [isTop, setTop] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
+  const [isEmailConfirmed, setIsEmailConfirmed] = useState(false)
   const [email, setEmail] = useState('')
 
   useEffect(() => {
@@ -36,6 +37,21 @@ const App = () => {
         setTop(true)
       }
     })
+
+    const urlParams = new URLSearchParams(window.location.search)
+    const email = urlParams.get('email-to-confirm')
+
+    if (email)
+      fetch('/.netlify/functions/email-confirmation', {
+        method: 'post',
+        body: JSON.stringify({ email })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.result === "Data updated.")
+          setIsEmailConfirmed(true)
+      }) // open box your email is confirmed. (emoticon party)
+      .catch(err => console.error(err))
   }, [])
 
   const handleSubmit = e => {
@@ -66,6 +82,19 @@ const App = () => {
       >
         <h1>Email Confirmation</h1>
         <p>An email has been sent to {email} to confirm your email address.</p>
+      </Modal>
+      <Modal
+        focusTrapped={false}
+        open={isEmailConfirmed}
+        onClose={() => setIsEmailConfirmed(false)} 
+        center
+        styles={{
+          closeButton: {background: 'transparent'},
+          modal: {width: '80vw', maxWidth: '300px', padding: '6vh 3vw'}
+        }}
+      >
+        <h1>Email Confirmed</h1>
+        <p>Your email address is confirmed.</p>
       </Modal>
       <div className={`App-header-menu ${isTop ? 'App-header-menu__isTop' : ''}`}>
         <div className="App-header-menu-logo">RECOVER</div>
