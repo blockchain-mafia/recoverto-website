@@ -132,7 +132,7 @@ const App = () => {
             <div className="App-header-wrapper-content-buttons">
               <a href="#App-section-how-h2">Learn More</a>
               <div className="App-header-wrapper-content-buttons-space">{' '}</div>
-              <a className="btn-solid" href="https://app.recover.to">Safe your item</a>
+              <a className="btn-solid" href="https://app.recover.to">Safe your Item</a>
             </div>
           </div>
       </header>
