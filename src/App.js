@@ -29,6 +29,7 @@ const App = () => {
   const [isTop, setTop] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
   const [isEmailConfirmed, setIsEmailConfirmed] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [email, setEmail] = useState('')
 
   useEffect(() => {
@@ -444,7 +445,7 @@ const App = () => {
               <li>Qr Code Prefunded</li>
               <li>Priority Support</li>
             </ul>
-            { isEmailConfirmed ? (
+            { isSubmitting ? (
               <div 
                 className="App-cta-container-inbox"
               >
@@ -460,7 +461,13 @@ const App = () => {
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                 />
-                <button className="App-cta-container-cards-btn" type="submit">Stay Tuned</button>
+                <button 
+                  className="App-cta-container-cards-btn" 
+                  type="submit"
+                  onClick={e => setIsSubmitting(true)} 
+                >
+                  Stay Tuned
+                </button>
               </form>
             )}
           </div>
