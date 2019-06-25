@@ -59,6 +59,7 @@ const App = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
+    setIsSubmitting(true)
     fetch("/?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -464,7 +465,6 @@ const App = () => {
                 <button 
                   className="App-cta-container-cards-btn" 
                   type="submit"
-                  onClick={e => setIsSubmitting(true)} 
                 >
                   Stay Tuned
                 </button>
