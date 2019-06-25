@@ -3,7 +3,8 @@
 
 @font-face {
   font-family: RadnikaBold;
-  src: url(./assets/fonts/Radnika-Bold.ttf);
+  font-display: auto;
+  src: url(./fonts/Radnika-Bold.ttf);
 }
 
 body {

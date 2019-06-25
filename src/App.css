@@ -5,7 +5,7 @@
 .App-header {
   min-width: 100vw;
   min-height: calc(100vh + 240px);
-  background: url(assets/header-bg.png) no-repeat;
+  background: url(assets/header-bg.webp) no-repeat;
   background-size: cover;
   background-position: bottom;
   color: white;
@@ -362,7 +362,7 @@
 
 .App-section-useCases-wrapper {
   text-align: left;
-  background-image: url(./assets/use-cases-bg.png);
+  background-image: url(./assets/use-cases-bg.webp);
   background-size: 100vw auto;
   background-repeat: no-repeat;
   padding-bottom: 100px;
