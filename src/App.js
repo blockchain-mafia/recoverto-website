@@ -7,6 +7,8 @@ import Modal from 'react-responsive-modal'
 
 import telegram from './assets/telegram.svg'
 import github from './assets/github.svg'
+import twitter from './assets/twitter.svg'
+import mail from './assets/mail.svg'
 import pet from './assets/pet.svg'
 import tablet from './assets/tablet.svg'
 import suitcase from './assets/suitcase.svg'
@@ -69,7 +71,6 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* Add modal ?email confirmation=email@example.com */}
       <Modal
         focusTrapped={false}
         open={isOpen} 
@@ -443,17 +444,25 @@ const App = () => {
               <li>Qr Code Prefunded</li>
               <li>Priority Support</li>
             </ul>
-            <form className="App-cta-container-cards-form" onSubmit={handleSubmit} name="contact">
-              <input 
-                placeholder="@" 
-                className="App-cta-container-cards-input" 
-                type="email" 
-                name="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-              <button className="App-cta-container-cards-btn" type="submit">Stay Tuned</button>
-            </form>
+            { isEmailConfirmed ? (
+              <div 
+                className="App-cta-container-inbox"
+              >
+                Check your Inbox
+              </div>
+            ) : (
+              <form className="App-cta-container-cards-form" onSubmit={handleSubmit} name="contact">
+                <input 
+                  placeholder="@" 
+                  className="App-cta-container-cards-input" 
+                  type="email" 
+                  name="email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                />
+                <button className="App-cta-container-cards-btn" type="submit">Stay Tuned</button>
+              </form>
+            )}
           </div>
           {/* TODO open mail contact@recover */}
           <div className="App-cta-container-cards App-cta-container-company">
@@ -473,8 +482,10 @@ const App = () => {
         </div>
       </section>
       <footer className="App-footer">
+        <img onClick={e => {window.location.href = 'https://twitter.com/_recover_to'}} src={twitter} className="App-footer-twitter" />
         <img onClick={e => {window.location.href = 'https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g'}} src={telegram} className="App-footer-telegram" />
         <img onClick={e => {window.location.href = 'https://github.com/blockchain-mafia/recoverto-contracts'}} src={github} className="App-footer-github" />
+        <img onClick={e => {window.location.href = 'mailto:contact@recover.to'}} src={mail} className="App-footer-mail" />
         @ 2019 RECOVER
       </footer>
     </div>

@@ -627,6 +627,17 @@
   list-style-image: url(./assets/check-white.svg);
 }
 
+.App-cta-container-inbox {
+  background: #a6ffcb;
+  border-radius: 10px;
+  font-family: Nunito;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 56px;
+  text-align: center;
+  color: #444444;
+}
+
 .App-cta-container-cards-form {
   box-shadow: 3px 3px 30px #ccc;
   border-radius: 50px;
@@ -753,9 +764,23 @@ input:invalid {
   padding: 0 5em;
 }
 
-.App-footer-telegram {
+.App-footer-twitter {
   position: absolute;
   left: 5em;
+  padding: 10px 20px 0 0;
+  cursor: pointer;
+}
+
+.App-footer-mail {
+  position: absolute;
+  left: calc(5em + 150px);
+  padding: 14px 20px 0 0;
+  cursor: pointer;
+}
+
+.App-footer-telegram {
+  position: absolute;
+  left: calc(5em + 50px);
   padding: 10px 20px 0 0;
   cursor: pointer;
 }
@@ -763,7 +788,7 @@ input:invalid {
 .App-footer-github {
   padding: 10px 20px 0 0;
   position: absolute;
-  left: calc(5em + 50px);
+  left: calc(5em + 100px);
   margin-top: 2px;
   cursor: pointer;
 }
@@ -924,7 +949,7 @@ input:invalid {
     display: none;
   }
 
-  .App-footer-telegram, .App-footer-github {
+  .App-footer-telegram, .App-footer-github, .App-footer-twitter, .App-footer-mail {
     display: none;
   }
 }
