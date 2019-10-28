@@ -103,7 +103,7 @@ const App = () => {
         <div className="App-header-menu-logo">RECOVER</div>
         <Menu right>
           <a id="app" className="menu-item" href="https://app.recover.to">APPLICATION</a>
-          <a id="add" className="menu-item" href="https://app.recover.to/new">ADD MY ITEM</a>
+          <a id="add" className="menu-item" href="https://app.recover.to/new/items/undefined/pk/undefined">ADD MY ITEM</a>
           <a id="telegram" className="menu-item" href="https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g">TELEGRAM</a>
         </Menu>
       </div>
@@ -423,10 +423,9 @@ const App = () => {
       </section>
       <section>
         <div className="App-cta-container">
-          {/* TODO redirect /new */}
           <div 
             className="App-cta-container-cards App-cta-container-free"
-            onClick={() => window.location.replace("https://recover.to/new")}
+            onClick={() => window.location.replace("https://recover.to/new/items/undefined/pk/undefined")}
           >
             <h3 className="App-cta-container-cards-title">FREE</h3>
             <ul>
