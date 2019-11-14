@@ -75,8 +75,8 @@ const App = () => {
     <div className="App">
       <Modal
         focusTrapped={false}
-        open={isOpen} 
-        onClose={() => setIsOpen(false)} 
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
         center
         styles={{
           closeButton: {background: 'transparent'},
@@ -89,7 +89,7 @@ const App = () => {
       <Modal
         focusTrapped={false}
         open={isEmailConfirmed}
-        onClose={() => setIsEmailConfirmed(false)} 
+        onClose={() => setIsEmailConfirmed(false)}
         center
         styles={{
           closeButton: {background: 'transparent'},
@@ -138,8 +138,8 @@ const App = () => {
       </header>
       <section className="App-section App-section-how">
         <h2 id="App-section-how-h2" className="App-section-how-h2">
-          A SIMPLE WORKFLOW TO<br /> 
-          RECOVER YOUR ITEM 
+          A SIMPLE WORKFLOW TO<br />
+          RECOVER YOUR ITEM
         </h2>
         <div className="App-section-how-illustration App-section-how-illustration0">{' '}</div>
         <div className="App-section-how-illustration App-section-how-illustration1">{' '}</div>
@@ -183,7 +183,7 @@ const App = () => {
             Be rewarded when you find and give back a lost item.
           </header>
           <div className='App-section-ctas-content'>
-            Claim the discovered of a lost item to get the reward. 
+            Claim the discovered of a lost item to get the reward.
           </div>
           <div className='App-section-ctas-link'>
             CLAIM DISCOVERED
@@ -192,7 +192,7 @@ const App = () => {
       </section>
       <section className='App-section App-section-technology'>
         <h2 className='App-section-technology-h2'>
-          MORE TECHNOLOGY<br /> 
+          MORE TECHNOLOGY<br />
           FOR A BETTER SERVICE
         </h2>
         <div className='App-section-technology-card App-section-technology-escrow'>
@@ -214,7 +214,7 @@ const App = () => {
       <section className="App-section-useCases-wrapper">
         <div className="App-section App-section-useCases">
           <h2 className="App-section-useCases-h2">
-            YOUR DATA ARE MORE IMPORTANT<br /> 
+            YOUR DATA ARE MORE IMPORTANT<br />
             THAN YOUR DEVICE
           </h2>
           <h4 className="App-section-useCases-h4">SAFE DATA LIKE YOUR ...</h4>
@@ -222,17 +222,17 @@ const App = () => {
             <div className="App-section-useCases-icon App-section-useCases-key-icon">{' '}</div>
             <h3>Private Keys</h3>
             <p>
-              If you have private keys registered on Metamask, Jaxx or other hot wallets and 
-              you have not kept your private keys on another support this service can be 
+              If you have private keys registered on Metamask, Jaxx or other hot wallets and
+              you have not kept your private keys on another support this service can be
               very useful if you lose your device.
             </p>
-          </div>   
+          </div>
           <div className="App-section-useCases-card App-section-useCases-work">
             <div className="App-section-useCases-icon App-section-useCases-work-icon">{' '}</div>
             <h3>Work</h3>
             <p>
               Sometimes our work such as writing a thesis, courses, a presentation is only recorded
-              on our computer. Its loss will result in the loss of many hours of work. 
+              on our computer. Its loss will result in the loss of many hours of work.
               Warning your computer against loss can be very convenient.
             </p>
           </div>
@@ -240,7 +240,7 @@ const App = () => {
             <div className="App-section-useCases-icon App-section-useCases-personnalData-icon">{' '}</div>
             <h3>Personnal Data</h3>
             <p>
-              Some personal data such as pictures of the last holiday, his notebook or private messages can be 
+              Some personal data such as pictures of the last holiday, his notebook or private messages can be
               very important. Here is a service that allows you to prevent the loss of this data.
             </p>
           </div>
@@ -255,31 +255,31 @@ const App = () => {
             <p>For five main reasons:</p>
             <ol>
               <li>
-                The service will always be accessible even if the 
-                recover.to servers are down it will still be possible 
+                The service will always be accessible even if the
+                recover.to servers are down it will still be possible
                 to use this service by making requests directly on the blockchain.
               </li>
               <li>
-                There are no intermediaries, which means that costs 
-                are low. All you need to do is pay the transaction fees 
+                There are no intermediaries, which means that costs
+                are low. All you need to do is pay the transaction fees
                 (called gas) to use this service.
               </li>
               <li>
-                We do not need to trust a third party service. This is 
-                called a trustless service. The thing you trust is the 
-                Ethereum protocol and the smart contracts 
+                We do not need to trust a third party service. This is
+                called a trustless service. The thing you trust is the
+                Ethereum protocol and the smart contracts
                 (<a href="https://etherscan.io/address/0x02C86846887faa1d964a838Dc50739B49c8329bc#contracts">Recover</a>&nbsp;
-                and <a href="https://etherscan.io/address/0x988b3A538b618C7A603e1c11Ab82Cd16dbE28069#code">Kleros</a>). 
-                These contracts are public and you can audit them 
+                and <a href="https://etherscan.io/address/0x988b3A538b618C7A603e1c11Ab82Cd16dbE28069#code">Kleros</a>).
+                These contracts are public and you can audit them
                 (technical skills required).
               </li>
               <li>
-                Ethereum makes it easy to make valuable microtransactions, 
+                Ethereum makes it easy to make valuable microtransactions,
                 which makes it possible to give a reward to the finder easily.
               </li>
               <li>
-                The blockchain is interoperable with third-party services as 
-                companies can easily use this service to plug their items 
+                The blockchain is interoperable with third-party services as
+                companies can easily use this service to plug their items
                 with this lost and found service.
               </li>
             </ol>
@@ -294,8 +294,8 @@ const App = () => {
               It is possible for the user to bypass his services and do it manually.
             </p>
             <p>
-              On the other hand, if you use a third party service to print your Qr Code 
-              it will be able to read the encrypted data. You must have a minimum of trust 
+              On the other hand, if you use a third party service to print your Qr Code
+              it will be able to read the encrypted data. You must have a minimum of trust
               in this service.
             </p>
           </Collapsible>
@@ -314,7 +314,7 @@ const App = () => {
         <div>
           <Collapsible trigger="Is it possible for a regular user to record an item?">
             <p>
-              Not really, currently it is only possible to add items 
+              Not really, currently it is only possible to add items
               if you know how to use <a href="https://metamask.io/">Metamask</a>.
             </p>
             <p>We are integrating this feature, add item without Metamask, in future versions.</p>
@@ -364,66 +364,15 @@ const App = () => {
         <div>
           <Collapsible trigger="What happens if one of the parties does not respect its commitments?">
             <p>
-              After trying to resolve the problem in a friendly way it is possible to create a dispute on Kleros 
+              After trying to resolve the problem in a friendly way it is possible to create a dispute on Kleros
               to arbitrate the dispute to handle the funds.
             </p>
           </Collapsible>
         </div>
       </section>
       <section>
-        <div className='App-banner-container-full'>
-          <h2 className='App-banner'>BUIDL* ON ETHEREUM & KLEROS</h2>
-          <div className='App-banner-container'>
-            <div className='App-banner-container-icons'>
-              <img src={laptop} className="App-banner-icon" alt="find-laptop" />
-              <img src={key} className="App-banner-icon" alt="find-key" />
-              <img src={suitcase} className="App-banner-icon" alt="find-suitcase" />
-              <img src={tablet} className="App-banner-icon" alt="find-tablet" />
-              <img src={wallet} className="App-banner-icon" alt="find-wallet" />
-              <img src={pet} className="App-banner-icon" alt="find-pet" />
-              <img src={phone} className="App-banner-icon" alt="find-phone" />
-            </div>
-            <h2 className='App-banner-container-item'>FOR {' '}
-              <ReactTyped
-                loop
-                typeSpeed={90}
-                backSpeed={70}
-                strings={[
-                  "PHONE", 
-                  "WALLET", 
-                  "PETS",
-                  "KEYS", 
-                  "BAG", 
-                  "TABLET",
-                  "LEDGER",
-                  "LUGGAGE",
-                  "AIRPODS"
-                ]}
-                smartBackspace
-                shuffle={false}
-                backDelay={1000}
-                fadeOut={false}
-                fadeOutDelay={100}
-                loopCount={0}
-                showCursor
-                cursorChar="|"
-              />
-            </h2>
-          </div>
-          {/* TODO container to avoid the tooltip on all */}
-          <div className="App-tooltip">*BUILD
-            <span className="App-tooltiptext">
-              BUIDL is a modification of HODL which means "hold on for dear life", 
-              which refers to investment, especially cryptocurrency. 
-              The BUIDL modification means "Build Useful Stuff" and refers to 
-              Blockchain technology and its development.
-            </span>
-          </div>
-        </div>
-      </section>
-      <section>
         <div className="App-cta-container">
-          <div 
+          <div
             className="App-cta-container-cards App-cta-container-free"
             onClick={() => window.location.replace("https://recover.to/new/items/undefined/pk/undefined")}
           >
@@ -446,23 +395,23 @@ const App = () => {
               <li>Priority Support</li>
             </ul>
             { isSubmitting ? (
-              <div 
+              <div
                 className="App-cta-container-inbox"
               >
                 Check your Inbox
               </div>
             ) : (
               <form className="App-cta-container-cards-form" onSubmit={handleSubmit} name="contact">
-                <input 
-                  placeholder="@" 
-                  className="App-cta-container-cards-input" 
-                  type="email" 
+                <input
+                  placeholder="@"
+                  className="App-cta-container-cards-input"
+                  type="email"
                   name="email"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                 />
-                <button 
-                  className="App-cta-container-cards-btn" 
+                <button
+                  className="App-cta-container-cards-btn"
                   type="submit"
                 >
                   Stay Tuned

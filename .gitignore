@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Airtable
 .airtable
+
+# Lambda
+/lambda
