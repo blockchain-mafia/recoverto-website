@@ -437,11 +437,10 @@ const App = () => {
         </div>
       </section>
       <footer className="App-footer">
-        <img onClick={e => {window.location.href = 'https://twitter.com/_recover_to'}} src={twitter} className="App-footer-twitter" />
-        <img onClick={e => {window.location.href = 'https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g'}} src={telegram} className="App-footer-telegram" />
+        <img onClick={e => {window.location.href = 'https://twitter.com/w_n1c01a5'}} src={twitter} className="App-footer-twitter" />
         <img onClick={e => {window.location.href = 'https://github.com/blockchain-mafia/recoverto-contracts'}} src={github} className="App-footer-github" />
         <img onClick={e => {window.location.href = 'mailto:contact@recover.to'}} src={mail} className="App-footer-mail" />
-        @ 2019 RECOVER
+        @ 2020 RECOVER
       </footer>
     </div>
   )
