@@ -778,13 +778,6 @@ input:invalid {
   cursor: pointer;
 }
 
-.App-footer-telegram {
-  position: absolute;
-  left: calc(5em + 50px);
-  padding: 10px 20px 0 0;
-  cursor: pointer;
-}
-
 .App-footer-github {
   padding: 10px 20px 0 0;
   position: absolute;
