@@ -102,8 +102,8 @@ const App = () => {
       <div className={`App-header-menu ${isTop ? 'App-header-menu__isTop' : ''}`}>
         <div className="App-header-menu-logo">RECOVER</div>
         <Menu right>
-          <a id="app" className="menu-item" href="https://app.recover.to">APPLICATION</a>
-          <a id="add" className="menu-item" href="https://app.recover.to/new/items/undefined/pk/undefined">ADD MY ITEM</a>
+          <a id="app" className="menu-item" href="https://app.recover.ws">APPLICATION</a>
+          <a id="add" className="menu-item" href="https://app.recover.ws/new/items/undefined/pk/undefined">ADD MY ITEM</a>
           <a id="telegram" className="menu-item" href="https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g">TELEGRAM</a>
         </Menu>
       </div>
@@ -132,7 +132,7 @@ const App = () => {
             <div className="App-header-wrapper-content-buttons">
               <a href="#App-section-how-h2">Learn More</a>
               <div className="App-header-wrapper-content-buttons-space">{' '}</div>
-              <a className="btn-solid" href="https://app.recover.to">Safe your Item</a>
+              <a className="btn-solid" href="https://app.recover.ws">Safe your Item</a>
             </div>
           </div>
       </header>
@@ -161,7 +161,7 @@ const App = () => {
         </div>
       </section>
       <section className='App-section App-section-ctas'>
-        <div className='App-section-ctas-owner' onClick={e => {window.location.href = 'https://app.recover.to'}}>
+        <div className='App-section-ctas-owner' onClick={e => {window.location.href = 'https://app.recover.ws'}}>
           <div className='App-section-ctas-header-top'>
             OWNER
           </div>
@@ -175,7 +175,7 @@ const App = () => {
             SAFE YOUR ITEM
           </div>
         </div>
-        <div className='App-section-ctas-finder' onClick={e => {window.location.href = 'https://app.recover.to'}}>
+        <div className='App-section-ctas-finder' onClick={e => {window.location.href = 'https://app.recover.ws'}}>
           <div className='App-section-ctas-header-top'>
             FINDER
           </div>
@@ -256,7 +256,7 @@ const App = () => {
             <ol>
               <li>
                 The service will always be accessible even if the
-                recover.to servers are down it will still be possible
+                recover.ws servers are down it will still be possible
                 to use this service by making requests directly on the blockchain.
               </li>
               <li>
@@ -374,7 +374,7 @@ const App = () => {
         <div className="App-cta-container">
           <div
             className="App-cta-container-cards App-cta-container-free"
-            onClick={() => window.location.replace("https://recover.to/new/items/undefined/pk/undefined")}
+            onClick={() => window.location.replace("https://recover.ws/new/items/undefined/pk/undefined")}
           >
             <h3 className="App-cta-container-cards-title">FREE</h3>
             <ul>
@@ -439,7 +439,7 @@ const App = () => {
       <footer className="App-footer">
         <img onClick={e => {window.location.href = 'https://twitter.com/w_n1c01a5'}} src={twitter} className="App-footer-twitter" />
         <img onClick={e => {window.location.href = 'https://github.com/blockchain-mafia/recoverto-contracts'}} src={github} className="App-footer-github" />
-        <img onClick={e => {window.location.href = 'mailto:contact@recover.to'}} src={mail} className="App-footer-mail" />
+        <img onClick={e => {window.location.href = 'mailto:contact@recover.ws'}} src={mail} className="App-footer-mail" />
         @ 2020 RECOVER
       </footer>
     </div>

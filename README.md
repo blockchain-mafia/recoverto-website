@@ -1,4 +1,4 @@
-# Recover.to website - Lost & Found service
+# Recover.ws website - Lost & Found service
 
 Lost & Found service based on Ethereum and Kleros.
 
