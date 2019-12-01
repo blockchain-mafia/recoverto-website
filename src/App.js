@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import TextLoop from 'react-text-loop'
-import ReactTyped from 'react-typed'
 import Collapsible from 'react-collapsible'
 import Modal from 'react-responsive-modal'
 
-import telegram from './assets/telegram.svg'
 import github from './assets/github.svg'
 import twitter from './assets/twitter.svg'
 import mail from './assets/mail.svg'
-import pet from './assets/pet.svg'
-import tablet from './assets/tablet.svg'
-import suitcase from './assets/suitcase.svg'
-import key from './assets/key.svg'
-import laptop from './assets/laptop.svg'
-import phone from './assets/phone.svg'
-import wallet from './assets/wallet.svg'
 
 import './App.css'
 
@@ -69,8 +60,6 @@ const App = () => {
       .catch(err => alert('Email error.'))
   }
 
-    // TODO: add lambda function to confirm email and show message: Your email is confirmed
-
   return (
     <div className="App">
       <Modal
@@ -104,7 +93,6 @@ const App = () => {
         <Menu right>
           <a id="app" className="menu-item" href="https://app.recover.ws">APPLICATION</a>
           <a id="add" className="menu-item" href="https://app.recover.ws/new/items/undefined/pk/undefined">ADD MY ITEM</a>
-          <a id="telegram" className="menu-item" href="https://t.me/joinchat/FHLxh03ifcIUaiFAu8DE0g">TELEGRAM</a>
         </Menu>
       </div>
       <header className="App-header">
@@ -439,7 +427,7 @@ const App = () => {
       <footer className="App-footer">
         <img onClick={e => {window.location.href = 'https://twitter.com/w_n1c01a5'}} src={twitter} className="App-footer-twitter" />
         <img onClick={e => {window.location.href = 'https://github.com/blockchain-mafia/recoverto-contracts'}} src={github} className="App-footer-github" />
-        <img onClick={e => {window.location.href = 'mailto:contact@recover.ws'}} src={mail} className="App-footer-mail" />
+        <img onClick={e => {window.location.href = 'mailto:contact@wagner-nicolas.com'}} src={mail} className="App-footer-mail" />
         @ 2020 RECOVER
       </footer>
     </div>
