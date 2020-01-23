@@ -92,7 +92,8 @@ const App = () => {
         <div className="App-header-menu-logo">RECOVER</div>
         <Menu right>
           <a id="app" className="menu-item" href="https://app.recover.ws">APPLICATION</a>
-          <a id="add" className="menu-item" href="https://app.recover.ws/new/items/undefined/pk/undefined">ADD MY ITEM</a>
+          {/* FIXME: add route to add an item */}
+          {/* <a id="add" className="menu-item" href="https://app.recover.ws/new/items/undefined/pk/undefined">ADD MY ITEM</a> */}
         </Menu>
       </div>
       <header className="App-header">
@@ -362,7 +363,7 @@ const App = () => {
         <div className="App-cta-container">
           <div
             className="App-cta-container-cards App-cta-container-free"
-            onClick={() => window.location.replace("https://recover.ws/new/items/undefined/pk/undefined")}
+            onClick={() => window.location.replace("https://app.recover.ws")}
           >
             <h3 className="App-cta-container-cards-title">FREE</h3>
             <ul>
