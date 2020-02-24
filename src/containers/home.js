@@ -4,19 +4,19 @@ import TextLoop from 'react-text-loop'
 import Collapsible from 'react-collapsible'
 import Modal from 'react-responsive-modal'
 
-import github from './assets/github.svg'
-import twitter from './assets/twitter.svg'
-import mail from './assets/mail.svg'
+import github from '../assets/github.svg'
+import twitter from '../assets/twitter.svg'
+import mail from '../assets/mail.svg'
 
-import './App.css'
+import './home.css'
 
-const encode = (data) => {
+const encode = data => {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
 }
 
-const App = () => {
+const Home = () => {
   const [isTop, setTop] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
   const [isEmailConfirmed, setIsEmailConfirmed] = useState(false)
@@ -51,10 +51,10 @@ const App = () => {
   const handleSubmit = e => {
     e.preventDefault()
     setIsSubmitting(true)
-    fetch("/?no-cache=1", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": 'contact', email })
+    fetch('/?no-cache=1', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', email })
     })
       .then(res => res.ok ? setIsOpen(true) : alert('Email error.'))
       .catch(err => alert('Email error.'))
@@ -97,33 +97,33 @@ const App = () => {
         </Menu>
       </div>
       <header className="App-header">
-          <div className="App-header-wrapper-content">
-            Lost and Found service
-            <br />
-            <div>
-              for {' '}
-              <TextLoop mask={true} interval={1400}>
-                <span>Phone</span>
-                <span>Wallet</span>
-                <span>Pets</span>
-                <span>Keys</span>
-                <span>Wallet</span>
-                <span>Bag</span>
-                <span>Tablet</span>
-                <span>Ledger</span>
-                <span>Luggage</span>
-                <span>AirPods</span>
-              </TextLoop>
-            </div>
-            <div className="App-header-wrapper-content-subtitle">
-              Protect your items from loss
-            </div>
-            <div className="App-header-wrapper-content-buttons">
-              <a href="#App-section-how-h2">Learn More</a>
-              <div className="App-header-wrapper-content-buttons-space">{' '}</div>
-              <a className="btn-solid" href="https://app.recover.ws">Safe your Item</a>
-            </div>
+        <div className="App-header-wrapper-content">
+          Lost and Found service
+          <br />
+          <div>
+            for {' '}
+            <TextLoop mask={true} interval={1400}>
+              <span>Phone</span>
+              <span>Wallet</span>
+              <span>Pets</span>
+              <span>Keys</span>
+              <span>Wallet</span>
+              <span>Bag</span>
+              <span>Tablet</span>
+              <span>Ledger</span>
+              <span>Luggage</span>
+              <span>AirPods</span>
+            </TextLoop>
           </div>
+          <div className="App-header-wrapper-content-subtitle">
+            Protect your items from loss
+          </div>
+          <div className="App-header-wrapper-content-buttons">
+            <a href="#App-section-how-h2">Learn More</a>
+            <div className="App-header-wrapper-content-buttons-space">{' '}</div>
+            <a className="btn-solid" href="https://app.recover.ws">Safe your Item</a>
+          </div>
+        </div>
       </header>
       <section className="App-section App-section-how">
         <h2 id="App-section-how-h2" className="App-section-how-h2">
@@ -435,4 +435,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Home

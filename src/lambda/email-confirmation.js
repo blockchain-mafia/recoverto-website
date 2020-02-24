@@ -2,7 +2,7 @@ import Airtable from 'airtable'
 import fs from 'fs'
 import dotenv from 'dotenv'
 
-// Set up airtable envs in the development envirronement.
+// Set up airtable envs in the development environnement.
 if (fs.existsSync('.airtable')) {
   const envConfig = dotenv.parse(
     fs.readFileSync('.airtable')
