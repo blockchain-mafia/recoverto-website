@@ -116,7 +116,7 @@ const Home = () => {
             </TextLoop>
           </div>
           <div className="App-header-wrapper-content-subtitle">
-            Protect your items from loss
+            Protect your valuables from loss
           </div>
           <div className="App-header-wrapper-content-buttons">
             <a href="#App-section-how-h2">Learn More</a>
@@ -128,24 +128,24 @@ const Home = () => {
       <section className="App-section App-section-how">
         <h2 id="App-section-how-h2" className="App-section-how-h2">
           A SIMPLE WORKFLOW TO<br />
-          RECOVER YOUR ITEM
+          RECOVER YOUR VALUABLES
         </h2>
         <div className="App-section-how-illustration App-section-how-illustration0">{' '}</div>
         <div className="App-section-how-illustration App-section-how-illustration1">{' '}</div>
         <div className="App-section-how-illustration App-section-how-illustration2">{' '}</div>
         <div className="App-section-how-description0">
           <ol>
-            <li>Generate and paste your Qr Code on your item.</li>
+            <li>Generate and paste your Qr Code on your valuable.</li>
           </ol>
         </div>
         <div className="App-section-how-description1">
           <ol start="2">
-            <li>Seeing the reward, the finder is incentived to give you back the item.</li>
+            <li>Seeing the reward, the finder is incentivized to return your item.</li>
           </ol>
         </div>
         <div className='App-section-how-description2'>
           <ol start="3">
-            <li>Exchange the reward for the item.</li>
+            <li>Exchange the reward for the valuable.</li>
           </ol>
         </div>
       </section>
@@ -155,7 +155,7 @@ const Home = () => {
             OWNER
           </div>
           <header className='App-section-ctas-header'>
-            Take care of your item against loss.
+            Take insure of your valuables against loss.
           </header>
           <div className='App-section-ctas-content'>
             Set up the reward and enter your contact information to generate the QR Code.
@@ -172,7 +172,7 @@ const Home = () => {
             Be rewarded when you find and give back a lost item.
           </header>
           <div className='App-section-ctas-content'>
-            Claim the discovered of a lost item to get the reward.
+            Claim the discovery of a lost item to get the reward.
           </div>
           <div className='App-section-ctas-link'>
             CLAIM DISCOVERED
@@ -192,18 +192,18 @@ const Home = () => {
         <div className='App-section-technology-card App-section-technology-privacy'>
           <div className="App-section-technology-icon App-section-technology-privacy-icon">{' '}</div>
           <h3>Privacy</h3>
-          <p>Your personnal data are encrypted and they are only accessible for the person who found your item.</p>
+          <p>Your personal data remains encrypted and it is only accessible to the person who finds the item.</p>
         </div>
         <div className='App-section-technology-card App-section-technology-blockchain'>
           <div className="App-section-technology-icon App-section-technology-blockchain-icon">{' '}</div>
           <h3>Blockchain</h3>
-          <p>This is a project based on Ethereum and Kleros to guarentee the resiliance of the application and to enforce the reward.</p>
+          <p>This is a project-based on Ethereum and Kleros to guarantee the resilience of the application and to enforce the reward.</p>
         </div>
       </section>
       <section className="App-section-useCases-wrapper">
         <div className="App-section App-section-useCases">
           <h2 className="App-section-useCases-h2">
-            YOUR DATA ARE MORE IMPORTANT<br />
+            YOUR DATA IS MORE IMPORTANT<br />
             THAN YOUR DEVICE
           </h2>
           <h4 className="App-section-useCases-h4">SAFE DATA LIKE YOUR ...</h4>
@@ -211,26 +211,25 @@ const Home = () => {
             <div className="App-section-useCases-icon App-section-useCases-key-icon">{' '}</div>
             <h3>Private Keys</h3>
             <p>
-              If you have private keys registered on Metamask, Jaxx or other hot wallets and
-              you have not kept your private keys on another support this service can be
-              very useful if you lose your device.
+              If you have private keys registered on Metamask, Jaxx, or any other hot wallets
+              and you have not backed them up on another support then this service is for you.
             </p>
           </div>
           <div className="App-section-useCases-card App-section-useCases-work">
             <div className="App-section-useCases-icon App-section-useCases-work-icon">{' '}</div>
             <h3>Work</h3>
             <p>
-              Sometimes our work such as writing a thesis, courses, a presentation is only recorded
-              on our computer. Its loss will result in the loss of many hours of work.
-              Warning your computer against loss can be very convenient.
+              Sometimes your work such as writing a thesis, in-progress courses, presentations are only
+              recorded on the computer. Its loss will result in the loss of many hours of work.
+              Safeguarding your computer against such losses can be very convenient.
             </p>
           </div>
           <div className="App-section-useCases-card App-section-useCases-personnalData">
             <div className="App-section-useCases-icon App-section-useCases-personnalData-icon">{' '}</div>
-            <h3>Personnal Data</h3>
+            <h3>Personal Data</h3>
             <p>
-              Some personal data such as pictures of the last holiday, his notebook or private messages can be
-              very important. Here is a service that allows you to prevent the loss of this data.
+              Some personal data such as pictures from the last holiday, private notebooks or journals,
+              or even private messages is worth more. Here is a service that allows you to safeguard the loss of this data.
             </p>
           </div>
         </div>
@@ -244,9 +243,8 @@ const Home = () => {
             <p>For five main reasons:</p>
             <ol>
               <li>
-                The service will always be accessible even if the
-                recover.ws servers are down it will still be possible
-                to use this service by making requests directly on the blockchain.
+                The service will always be accessible even if recover.ws servers are down.
+                It will still be possible to use this service by making requests directly on the blockchain.
               </li>
               <li>
                 There are no intermediaries, which means that costs
@@ -277,10 +275,10 @@ const Home = () => {
         <div>
           <Collapsible trigger="Is this application completely decentralized?">
             <p>Yes, all the logic of the application is programmed on a smart contract.</p>
-            <p>To record encrypted contact information we will use our own IPFS node but you can use yours.</p>
+            <p>To record encrypted contact information we will use our own IPFS node but you can use yours too.</p>
             <p>
-              Optional services are centralized such as email notifications when an object is found.
-              It is possible for the user to bypass his services and do it manually.
+              Optional services are centralized such as an email notification you will receive when an object is found.
+              It is possible for the user to bypass this service and do it manually.
             </p>
             <p>
               On the other hand, if you use a third party service to print your Qr Code
@@ -327,19 +325,19 @@ const Home = () => {
         <div>
           <Collapsible trigger="Is there a notification service when we claim a found?">
             <p>
-              Yes, the owner receives an email notification if he/she has subscribed to this service
-              but it is preferable to contact him/her also with the contact information he/she
-              has provided to maximize your chances to get the reward.
+              Yes, the owner receives an email notification if they have subscribed to this service
+              but it is preferable to contact them directly with the contact information they have provided
+              to maximize your chances to get the reward.
             </p>
           </Collapsible>
         </div>
         <div>
           <Collapsible trigger="Where do I put the sticker?">
           <p>
-            Ideally it is good to put it in a place that is neither too visible nor too hidden.
-            Indeed, it should be avoided that the scan of the QR code is too accessible if not someone
-            to have access to your data when the object is not lost but it must be visible enough to
-            if the object is lost a person can see it.
+            Ideally, it is good to put it in a place that is neither too visible nor too hidden.
+            Indeed, it should be avoided that the QR code is too accessible for someone to scan it if in case the item is not lost.
+            This way the person may have access to your private data. On the other hand,
+            the QR code must be visible to a person in case your item is lost.
           </p>
           </Collapsible>
         </div>
@@ -367,20 +365,20 @@ const Home = () => {
           >
             <h3 className="App-cta-container-cards-title">FREE</h3>
             <ul>
-              <li>Unlimited QR Code</li>
-              <li>Email Notification</li>
-              <li>SMS Notification</li>
+              <li>Unlimited QR Codes</li>
+              <li>Email Notifications</li>
+              <li>SMS Notifications</li>
             </ul>
           </div>
           <div className="App-cta-container-cards App-cta-container-loser">
             <h3 className="App-cta-container-cards-title App-cta-container-cards-title-white">LOSER PACK</h3>
             <ul>
-              <li>Email Notification</li>
-              <li>SMS Notification</li>
+              <li>Email Notifications</li>
+              <li>SMS Notifications</li>
               <li>Stickers</li>
-              <li>Card</li>
+              <li>Cards</li>
               <li>Keyring</li>
-              <li>Qr Code Prefunded</li>
+              <li>Qr Code Pre-funded</li>
               <li>Priority Support</li>
             </ul>
             { isSubmitting ? (
@@ -412,9 +410,9 @@ const Home = () => {
           <div className="App-cta-container-cards App-cta-container-company">
             <h3 className="App-cta-container-cards-title">COMPANY</h3>
             <ul>
-              <li>Unlimited QR Code</li>
+              <li>Unlimited QR Codes</li>
               <li>API access</li>
-              <li>Qr Code Prefunded</li>
+              <li>Qr Code Pre-funded</li>
               <li>Priority Support</li>
             </ul>
           </div>
